@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinAxis AI - 分析报告</title>
+    <!-- 引入Font Awesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #f44336;
+            --primary-light: #ffcdd2;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f9f9f9;
+            --border-color: #e0e0e0;
+            --success-color: #4caf50;
+            --success-light: #c8e6c9;
+            --warning-color: #ff9800;
+            --warning-light: #ffe0b2;
+            --info-color: #2196f3;
+            --info-light: #bbdefb;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 侧边栏样式 */
+        .sidebar {
+            width: 250px;
+            background: white;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            padding: 20px 0;
+            position: fixed;
+            height: 100%;
+            z-index: 100;
+        }
+        
+        .logo {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+        
+        .logo-text span {
+            color: var(--primary-color);
+            margin-left: 4px;
+        }
+        
+        .nav-menu {
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-bottom: 5px;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .nav-link i {
+            margin-right: 10px;
+            font-size: 20px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        /* 主内容区样式 */
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .page-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .refresh-time {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* 生成报告区域 */
+        .generate-report {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .generate-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .generate-title i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .generate-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .form-select, .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .date-range {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .date-label {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .form-action {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .generate-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .generate-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        /* 报告列表区域 */
+        .report-list-section {
+            margin-bottom: 30px;
+        }
+
+        .report-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 20px;
+            margin-bottom: 20px;
+        }
+
+        .toolbar-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        .toolbar-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .toolbar-btn {
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .primary-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .primary-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        .outline-btn {
+            background-color: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .outline-btn:hover {
+            background-color: var(--bg-light);
+        }
+
+        .search-input {
+            padding: 8px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            width: 200px;
+        }
+
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .report-info {
+            flex: 1;
+        }
+
+        .report-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .report-title i {
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .report-meta {
+            color: var(--text-light);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .report-badge {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .badge-daily {
+            background-color: var(--info-light);
+            color: var(--info-color);
+        }
+
+        .badge-weekly {
+            background-color: var(--success-light);
+            color: var(--success-color);
+        }
+
+        .badge-monthly {
+            background-color: var(--warning-light);
+            color: var(--warning-color);
+        }
+
+        .badge-custom {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+        }
+
+        .report-content {
+            padding: 20px;
+        }
+
+        .report-summary {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .report-highlights {
+            margin-bottom: 15px;
+        }
+
+        .highlight-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .highlights-list {
+            list-style: none;
+        }
+
+        .highlight-item {
+            font-size: 13px;
+            color: var(--text-dark);
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight-item i {
+            font-size: 14px;
+        }
+
+        .highlight-up {
+            color: var(--success-color);
+        }
+
+        .highlight-down {
+            color: var(--primary-color);
+        }
+
+        .highlight-neutral {
+            color: var(--info-color);
+        }
+
+        .report-footer {
+            padding: 15px 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-light);
+        }
+
+        .report-creator {
+            font-size: 13px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .creator-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .report-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            background-color: white;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .action-btn:hover {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* 分页 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .page-item {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .page-item.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .page-item:not(.active):hover {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+        }
+
+        .page-nav {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .page-nav:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        /* 报告详情模态框 */
+        .report-detail-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 50px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-title i {
+            color: var(--primary-color);
+            font-size: 22px;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--primary-color);
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        /* AI助手浮动按钮 */
+        .ai-assistant {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .ai-assistant:hover {
+            transform: scale(1.1);
+        }
+        
+        .ai-assistant i {
+            font-size: 24px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .sidebar {
+                width: 70px;
+                overflow: hidden;
+            }
+            
+            .logo-text, .nav-link span {
+                display: none;
+            }
+            
+            .nav-link {
+                justify-content: center;
+                padding: 15px;
+            }
+            
+            .nav-link i {
+                margin-right: 0;
+            }
+            
+            .main-content {
+                margin-left: 70px;
+            }
+            
+            .generate-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .report-toolbar {
+                flex-direction: column;
+                gap: 15px;
+                align-items: stretch;
+            }
+            
+            .toolbar-actions {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .reports-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .report-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .modal-content {
+                margin: 20px;
+                max-width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 侧边栏导航 -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../img/logo.png" alt="WinAxis AI Logo">
+                <div class="logo-text">WinAxis<span>AI</span></div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>数据概览</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="data-analysis.html" class="nav-link">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>数据分析</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="alert-warning.html" class="nav-link">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>异常预警</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="analytics-report.html" class="nav-link active">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>分析报告</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="ai-assistant.html" class="nav-link">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>智能助手</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="system-settings.html" class="nav-link">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>系统设置</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <div class="header">
+                <h1 class="page-title">分析报告</h1>
+                <div class="refresh-time">最后更新时间: 2025-04-23 15:45</div>
+            </div>
+            
+            <!-- 生成报告区域 -->
+            <div class="generate-report">
+                <h2 class="generate-title">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    生成新报告
+                </h2>
+                <div class="generate-form">
+                    <div class="form-group">
+                        <label class="form-label">报告类型</label>
+                        <select class="form-select">
+                            <option value="comprehensive">综合数据报告</option>
+                            <option value="ggr">GGR分析报告</option>
+                            <option value="user-retention">用户留存报告</option>
+                            <option value="promo-effectiveness">优惠活动效果分析</option>
+                            <option value="platform-comparison">平台数据对比</option>
+                            <option value="custom">自定义报告</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">报告周期</label>
+                        <select class="form-select">
+                            <option value="daily">日报</option>
+                            <option value="weekly" selected>周报</option>
+                            <option value="monthly">月报</option>
+                            <option value="custom">自定义</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">平台选择</label>
+                        <select class="form-select">
+                            <option value="all">全部平台</option>
+                            <option value="platformA">平台A</option>
+                            <option value="platformB">平台B</option>
+                            <option value="platformC">平台C</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">游戏类型</label>
+                        <select class="form-select">
+                            <option value="all">全部游戏</option>
+                            <option value="slots">老虎机</option>
+                            <option value="live">真人娱乐</option>
+                            <option value="sports">体育赛事</option>
+                            <option value="lottery">彩票游戏</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">时间范围</label>
+                    <div class="date-range">
+                        <select class="form-select" style="width: 120px;">
+                            <option value="today">今日</option>
+                            <option value="yesterday">昨日</option>
+                            <option value="last7days" selected>过去7天</option>
+                            <option value="last30days">过去30天</option>
+                            <option value="thisMonth">本月</option>
+                            <option value="lastMonth">上月</option>
+                            <option value="custom">自定义</option>
+                        </select>
+                        <span class="date-label">从</span>
+                        <input type="date" class="form-input" style="width: 140px;" value="2025-04-16">
+                        <span class="date-label">至</span>
+                        <input type="date" class="form-input" style="width: 140px;" value="2025-04-23">
+                    </div>
+                </div>
+                
+                <div class="form-action">
+                    <button class="generate-btn">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        生成AI分析报告
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 报告列表区域 -->
+            <div class="report-list-section">
+                <div class="report-toolbar">
+                    <div class="toolbar-title">我的报告列表</div>
+                    <div class="toolbar-actions">
+                        <input type="text" class="search-input" placeholder="搜索报告">
+                        <button class="toolbar-btn outline-btn">
+                            <i class="fa-solid fa-filter"></i>
+                            筛选
+                        </button>
+                        <button class="toolbar-btn primary-btn">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            历史报告
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 报告卡片网格 -->
+                <div class="reports-grid">
+                    <!-- 周报卡片 -->
+                    <div class="report-card">
+                        <div class="report-header">
+                            <div class="report-info">
+                                <div class="report-title">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                    平台综合数据周报
+                                </div>
+                                <div class="report-meta">
+                                    <div class="meta-item">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        2025-04-23
+                                    </div>
+                                    <span class="report-badge badge-weekly">周报</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="report-summary">
+                                本周平台总GGR环比上升8.6%，达¥14,250,675，其中平台A表现最佳，增长15.2%。用户活跃度整体提升，但次日留存率下滑3.4%。
+                            </div>
+                            <div class="report-highlights">
+                                <div class="highlight-title">关键发现</div>
+                                <ul class="highlights-list">
+                                    <li class="highlight-item">
+                                        <i class="fa-solid fa-arrow-trend-up highlight-up"></i>
+                                        平台A的GGR持续增长，优惠占比低，ROI表现优秀
+                                    </li>
+                                    <li class="highlight-item">
+                                        <i class="fa-solid fa-arrow-trend-down highlight-down"></i>
+                                        次日留存率从32.1%下降至28.7%，需关注用户流失
+                                    </li>
+                                    <li class="highlight-item">
+                                        <i class="fa-solid fa-circle-info highlight-neutral"></i>
+                                        GCash渠道获客成本提高，留存率低于平均水平
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="report-footer">
+                            <div class="report-creator">
+                                <div class="creator-avatar">AI</div>
+                                <span>AI自动生成</span>
+                            </div>
+                            <div class="report-actions">
+                                <button class="action-btn" title="查看详情">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="action-btn" title="下载报告">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                                <button class="action-btn" title="分享报告">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- GGR分析报告卡片 -->
+                    <div class="report-card">
+                        <div class="report-header">
+                            <div class="report-info">
+                                <div class="report-title">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                    GGR与投注行为深度分析
+                                </div>
+                                <div class="report-meta">
+                                    <div class="meta-item">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        2025-04-20
+                                    </div>
+                                    <span class="report-badge badge-custom">自定义</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="report-summary">
+                                本报告深入剖析平台各游戏类型的GGR贡献与用户投注行为，发现老虎机游戏贡献最高GGR，但真人娱乐类用户留存率更高。
+                            </div>
+                            <div class="report-highlights">
+                                <div class="highlight-title">关键发现</div>
+                                <ul class="highlights-list">
+                                    <li class="highlight-item">
+                                        <i class="fa-solid fa-arrow-trend-up highlight-up"></i>
+                                        真人娱乐类游戏用户平均每次投注金额增长12.4%
+                                    </li>
+                                    <li class="highlight-item">
+                                        <i class="fa-solid fa-arrow-trend-down highlight-down"></i>
+                                        体育赛事类投注活跃度下降8.7%，受赛事减少影响
+                                    </li>
+                                    <li class="highlight-item">
+                                        <i class="fa-solid fa-circle-info highlight-neutral"></i>
+                                        新上线游戏"TREASURE RAIDERS"首周表现优异
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="report-footer">
+                            <div class="report-creator">
+                                <div class="creator-avatar">ZL</div>
+                                <span>张磊</span>
+                            </div>
+                            <div class="report-actions">
+                                <button class="action-btn" title="查看详情">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="action-btn" title="下载报告">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                                

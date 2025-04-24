@@ -1,1 +1,1038 @@
-2376
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinAxis AI</title>
+    <link rel="shortcut icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #f44336;
+            --primary-light: #ffcdd2;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f9f9f9;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏 */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+        
+        .logo-text span {
+            color: var(--primary-color);
+            margin-left: 4px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #d32f2f;
+        }
+        
+        /* 英雄区域 */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e6e9f0 100%);
+            padding: 160px 0 80px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .secondary-button {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .secondary-button:hover {
+            background-color: var(--primary-light);
+        }
+        
+        /* 特点部分 */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon i {
+            color: var(--primary-color);
+            font-size: 28px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+        }
+        
+        /* 解决方案部分 */
+        .solutions {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .solutions-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-top: 60px;
+        }
+        
+        .solutions-content {
+            flex: 1;
+        }
+        
+        .solutions-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .solutions-image img {
+            max-width: 100%;
+/*            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);*/
+        }
+        
+        .solutions-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+        
+        .solutions-content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .solution-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .point-icon {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .point-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .point-content p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        
+        /* 技术架构部分 */
+        .architecture {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .architecture-diagram {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .arch-level {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            position: relative;
+            text-align: center;
+        }
+        
+        .arch-level::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background-color: var(--primary-color);
+        }
+        
+        .arch-level:last-child::after {
+            display: none;
+        }
+        
+        .arch-level h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .arch-level p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* 案例部分 */
+        .cases {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .case-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .case-tab {
+            padding: 10px 20px;
+            background-color: white;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .case-tab:first-child {
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .case-tab:last-child {
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .case-tab.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .case-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .case-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .case-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .case-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .case-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .case-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .case-dialogue {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .question {
+            margin-bottom: 15px;
+        }
+        
+        .question p {
+            background-color: #e0e0e0;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+            margin: 0;
+        }
+        
+        .answer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .answer p {
+            background-color: var(--primary-light);
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+            margin-bottom: 10px;
+        }
+        
+        /* 联系部分 */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-icon i {
+            font-size: 20px;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-details p, .contact-details a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        textarea.form-control {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #d32f2f;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #bdc3c7;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .solutions-wrapper {
+                flex-direction: column;
+            }
+            
+            .solutions-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero {
+                padding: 130px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons a {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="img/logo.png" alt="WinAxis AI Logo">
+                    <div class="logo-text">WinAxis<span>AI</span></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">产品特点</a></li>
+                    <li><a href="#solutions">解决方案</a></li>
+                    <li><a href="#architecture">技术架构</a></li>
+                    <li><a href="#cases">案例展示</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                    <li><a href="demo/dashboard.html" class="cta-button"  style="color: #fff;">系统演示</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>AI驱动的博彩数据<br>智能分析与决策平台</h1>
+                <p>WinAxis AI 结合先进的数据分析技术与人工智能能力，打破传统数据分析门槛，帮助博彩行业各角色高效获取数据价值，实现"人人可分析、快速可用"的数据智能时代。</p>
+                <div class="hero-buttons">
+                    <a href="#solutions" class="cta-button">了解解决方案</a>
+                    <a href="#contact" class="secondary-button">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特点部分 -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>核心优势</h2>
+                <p>WinAxis AI 突破传统数据分析工具的限制，让博彩运营数据分析变得简单高效</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>自然语言交互</h3>
+                    <p>无需掌握SQL或BI工具，只需通过自然语言提问即可获取数据洞察，真正实现"人人皆可用"的数据分析体验。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>实时洞察与预警</h3>
+                    <p>自动监控关键业务指标，提供异常检测、原因解释和策略建议的全链路智能分析，帮助企业抢占市场先机。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3>模块化架构设计</h3>
+                    <p>支持与多种数据源快速接入，AI分析层可自由切换大模型，根据业务灵活配置，轻松扩展更多业务模块。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>可视化交互体验</h3>
+                    <p>数据分析结果搭配图表输出，图文结合更易理解与汇报，支持一键导出报告，提升团队协作效率。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>数据安全保障</h3>
+                    <p>支持私有化部署，所有数据均在企业内部流转，实现严格的访问权限控制与完整的数据安全防护机制。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>洞察驱动决策</h3>
+                    <p>从"数据"走向"答案"，提供智能化的博彩业务洞察与决策建议，帮助企业实现数据驱动的精准运营。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解决方案部分 -->
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI解决方案</h2>
+                <p>针对博彩行业数据痛点，提供全面的智能分析解决方案</p>
+            </div>
+            <div class="solutions-wrapper">
+                <div class="solutions-content">
+                    <h2>打破数据孤岛，赋能运营决策</h2>
+                    <p>WinAxis AI 通过整合大模型的强大能力，为博彩企业各层级角色提供针对性的数据分析与决策支持服务。</p>
+                    
+                    <div class="solution-point">
+                        <div class="point-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="point-content">
+                            <h4>管理层决策支持</h4>
+                            <p>为CEO/运营总监提供关键指标洞察和趋势分析，实现真正的数据驱动决策，快速把握市场机会。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="solution-point">
+                        <div class="point-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="point-content">
+                            <h4>运营团队效率提升</h4>
+                            <p>帮助运营团队快速分析用户行为、留存率、投注模式等指标，优化运营策略，提高用户价值。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="solution-point">
+                        <div class="point-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="point-content">
+                            <h4>智能风控预警</h4>
+                            <p>自动监测异常投注行为、高额盈利等风险信号，及时预警并提供响应建议，保障业务安全。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="solution-point">
+                        <div class="point-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="point-content">
+                            <h4>降低技术团队负担</h4>
+                            <p>减少数据请求的碎片化，避免临时需求频发和重复劳动，提高数据系统的维护效率。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="solutions-image">
+                    <img src="img/2.png" alt="WinAxis AI解决方案展示">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术架构部分 -->
+    <section class="architecture" id="architecture">
+        <div class="container">
+            <div class="section-title">
+                <h2>系统架构</h2>
+                <p>基于PandaAI/Claude的智能分析平台，结合数据接口和AI能力，打造实时、智能、交互式的数据分析与洞察系统</p>
+            </div>
+            <div class="architecture-diagram">
+                <div class="arch-level">
+                    <h4>数据源层 (Data Source Layer)</h4>
+                    <p>来自数据库、API、日志系统和埋点数据，提供结构化/半结构化的原始数据</p>
+                </div>
+                <div class="arch-level">
+                    <h4>API网关/中间服务层 (API Gateway / Middleware)</h4>
+                    <p>负责接收数据请求、整合数据，调用AI服务；实现数据标准化、过滤、缓存处理</p>
+                </div>
+                <div class="arch-level">
+                    <h4>AI分析层 (AI Analytics Layer)</h4>
+                    <p>集成PandaAI/Claude，进行自然语言理解与智能分析，多维度解读数据并提供结构化回答</p>
+                </div>
+                <div class="arch-level">
+                    <h4>可视化监控层 (Visualization & Monitoring Layer)</h4>
+                    <p>输出图表、预警和支持聊天问答交互，动态展示关键指标和异常预警</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示部分 -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI交互示例</h2>
+                <p>通过自然语言直接提问，获得结构化洞察与决策建议</p>
+            </div>
+            <div class="case-tabs">
+                <div class="case-tab active">管理层决策</div>
+                <div class="case-tab">运营分析</div>
+                <div class="case-tab">异常预警</div>
+            </div>
+            <div class="case-content">
+                <div class="case-header">
+                    <div class="case-avatar">
+                        <img src="img/1.png" alt="用户头像">
+                    </div>
+                    <div class="case-info">
+                        <h4>CEO / 运营总监</h4>
+                        <p>数据驱动决策示例</p>
+                    </div>
+                </div>
+                <div class="case-dialogue">
+                    <div class="question">
+                        <p>最近两周所有平台的GGR和优惠占比的数据情况如何？</p>
+                    </div>
+                    <div class="answer">
+                        <p><strong>1. 整体GGR趋势：</strong><br>总体GGR环比上升+8.6%，主要增长来自[平台A] +15.2%和[平台C] +9.1%</p>
+                        <p><strong>2. 优惠占比情况：</strong><br>平均优惠占比为17.3%，其中[平台A]虽优惠占比低(13.8%)，但GGR提升明显，ROI较优</p>
+                        <p><strong>3. 建议策略：</strong><br>可考虑将[平台A]的优惠策略作为模板，适度控制[平台C]的优惠成本</p>
+                    </div>
+                </div>
+                <div class="case-content-description">
+                    <p>WinAxis AI能够自动分析GGR和优惠数据的关系，提供可视化趋势和actionable的决策建议，帮助管理层快速把握业务状况并做出数据驱动的决策。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系部分 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我们</h2>
+                <p>了解更多关于WinAxis AI如何帮助您的业务实现数据驱动的转型</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>公司地址</h4>
+                            <p>xxx xxx xxx</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>联系电话</h4>
+                            <p>xxx xxx xxx</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>电子邮箱</h4>
+                            <p>info@winaxis.ai</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>技术支持</h4>
+                            <p>support@winaxis.ai</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <!-- <h3>预约产品试用</h3> -->
+                    <form>
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" class="form-control" placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">公司名称</label>
+                            <input type="text" id="company" class="form-control" placeholder="请输入公司名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮箱</label>
+                            <input type="email" id="email" class="form-control" placeholder="请输入您的电子邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="请输入您的联系电话">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">您的需求</label>
+                            <textarea id="message" class="form-control" placeholder="请简要描述您的业务需求"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">发展历程</a></li>
+                        <li><a href="#">团队介绍</a></li>
+                        <li><a href="#">合作伙伴</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>产品服务</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">WinAxis 数据平台</a></li>
+                        <li><a href="#">智能风控系统</a></li>
+                        <li><a href="#">用户画像分析</a></li>
+                        <li><a href="#">数据安全解决方案</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>技术支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">文档中心</a></li>
+                        <li><a href="#">API接口</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">技术博客</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WinAxis AI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 为案例选项卡添加点击事件
+        document.addEventListener('DOMContentLoaded', function() {
+            const caseTabs = document.querySelectorAll('.case-tab');
+            caseTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // 移除所有选项卡的active类
+                    caseTabs.forEach(t => t.classList.remove('active'));
+                    // 为当前点击的选项卡添加active类
+                    this.classList.add('active');
+                    
+                    // 这里可以添加切换案例内容的逻辑
+                    // 简化版本中我们只做了样式切换
+                });
+            });
+        });
+    </script>
+</body>
+</html>
