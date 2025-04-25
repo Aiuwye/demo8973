@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="396px" height="258px" viewBox="0 0 396 258" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 6</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6" transform="translate(2.000000, 0.000000)" fill-rule="nonzero">
+            <rect id="Rectangle" stroke="#E61F34" stroke-width="3.63" fill="#FFFFFF" x="72.5538462" y="49.0617577" width="241.846154" height="145.368171"></rect>
+            <line x1="322.4" y1="121.745843" x2="352.630769" y2="121.745843" id="Path" stroke="#CCCCCC" stroke-width="1.815" fill="#000000" stroke-dasharray="6.050000000000001,6.050000000000001"></line>
+            <line x1="74.7555265" y1="97.5178147" x2="311.097479" y2="97.5178147" id="Path" stroke="#EAEAEA" stroke-width="1.21" fill="#000000"></line>
+            <line x1="74.7555265" y1="145.973872" x2="311.097479" y2="145.973872" id="Path" stroke="#EAEAEA" stroke-width="1.21" fill="#000000"></line>
+            <line x1="133.015385" y1="51.2600336" x2="133.015385" y2="192.231653" id="Path" stroke="#EAEAEA" stroke-width="1.21" fill="#000000"></line>
+            <line x1="193.476923" y1="51.2600336" x2="193.476923" y2="192.231653" id="Path" stroke="#EAEAEA" stroke-width="1.21" fill="#000000"></line>
+            <line x1="253.938462" y1="51.2600336" x2="253.938462" y2="192.231653" id="Path" stroke="#EAEAEA" stroke-width="1.21" fill="#000000"></line>
+            <ellipse id="Oval" stroke="#CCCCCC" stroke-width="1.815" fill="#FFFFFF" cx="102.784615" cy="67.2327791" rx="7.25538462" ry="7.26840855"></ellipse>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.815" fill="#FFFFFF" cx="157.2" cy="85.4038005" rx="9.67384615" ry="9.6912114"></ellipse>
+            <ellipse id="Oval" stroke="#CCCCCC" stroke-width="1.815" fill="#FFFFFF" cx="114.876923" cy="158.087886" rx="6.04615385" ry="6.05700713"></ellipse>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.815" fill="#FFFFFF" cx="163.246154" cy="170.2019" rx="8.46461538" ry="8.47980998"></ellipse>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.815" fill="#FFFFFF" cx="223.707692" cy="139.916865" rx="10.8830769" ry="10.9026128"></ellipse>
+            <ellipse id="Oval" stroke="#CCCCCC" stroke-width="1.815" fill="#FFFFFF" cx="290.215385" cy="164.144893" rx="7.25538462" ry="7.26840855"></ellipse>
+            <polygon id="Path" stroke="#BBBBBB" stroke-width="2.42" fill="#FFFFFF" points="18.1384615 109.631829 36.2769231 145.973872 0 145.973872"></polygon>
+            <text id="!" fill="#E61F34" font-family="Arial-BoldMT, Arial" font-size="18.15" font-weight="bold">
+                <tspan x="15.1142093" y="138.969309">!</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.815" fill="#FFFFFF" x="344.630769" y="85.4038005" width="48.3692308" height="72.6840855" rx="3.63"></rect>
+            <line x1="356.723077" y1="103.574822" x2="380.907692" y2="103.574822" id="Path" stroke="#BBBBBB" stroke-width="1.21" fill="#000000"></line>
+            <line x1="356.723077" y1="121.745843" x2="380.907692" y2="121.745843" id="Path" stroke="#BBBBBB" stroke-width="1.21" fill="#000000"></line>
+            <line x1="356.723077" y1="139.916865" x2="380.907692" y2="139.916865" id="Path" stroke="#BBBBBB" stroke-width="1.21" fill="#000000"></line>
+            <line x1="36.2769231" y1="121.745843" x2="72.5538462" y2="121.745843" id="Path" stroke="#CCCCCC" stroke-width="1.815" fill="#000000" stroke-dasharray="6.050000000000001,6.050000000000001"></line>
+            <line x1="72.5538462" y1="194.429929" x2="314.4" y2="49.0617577" id="Path" stroke="#BBBBBB" stroke-width="1.21" fill="#000000" stroke-dasharray="3.629999947547913,3.629999947547913"></line>
+            <line x1="193.476923" y1="194.429929" x2="193.476923" y2="230.771971" id="Path" stroke="#CCCCCC" stroke-width="1.815" fill="#000000" stroke-dasharray="6.050000000000001,6.050000000000001"></line>
+            <line x1="253.938462" y1="230.771971" x2="272.076923" y2="230.771971" id="Path" stroke="#CCCCCC" stroke-width="1.815" fill="#000000" stroke-dasharray="6.050000000000001,6.050000000000001"></line>
+            <line x1="272.076923" y1="230.771971" x2="272.076923" y2="194.429929" id="Path" stroke="#CCCCCC" stroke-width="1.815" fill="#000000" stroke-dasharray="6.050000000000001,6.050000000000001"></line>
+            <line x1="6.04615385" y1="0.605700713" x2="380.907692" y2="0.605700713" id="Path" stroke="#EAEAEA" stroke-width="1.21" fill="#000000"></line>
+            <line x1="6.04615385" y1="218.657957" x2="380.907692" y2="218.657957" id="Path" stroke="#EAEAEA" stroke-width="1.21" fill="#000000"></line>
+            <ellipse id="Oval" stroke="#CCCCCC" stroke-width="1.815" fill="#FFFFFF" cx="211.615385" cy="115.688836" rx="6.04615385" ry="6.05700713"></ellipse>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.815" fill="#FFFFFF" cx="272.076923" cy="79.3467933" rx="8.46461538" ry="8.47980998"></ellipse>
+            <polygon id="Path" stroke="#BBBBBB" stroke-width="1.815" fill="#FFFFFF" points="211.615385 218.657957 235.8 218.657957 235.8 206.543943 253.938462 230.771971 235.8 255 235.8 242.885986 211.615385 242.885986"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background elements -->
+  <rect x="25" y="220" width="400" height="4" rx="2" fill="#F7F7F8" />
+  
+  <!-- Connection lines -->
+  <path d="M90 150 L180 150 L180 110 L270 110 L270 150 L360 150" fill="none" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Warehouse/Factory (Start of chain) -->
+  <rect x="50" y="130" width="40" height="40" rx="5" fill="none" stroke="#BBBBBB" stroke-width="3" />
+  <path d="M50 140 L90 140" stroke="#BBBBBB" stroke-width="2" />
+  <path d="M60 130 L60 110 L80 110 L80 130" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  
+  <!-- Distribution Center -->
+  <rect x="160" y="90" width="40" height="40" rx="5" fill="none" stroke="#BBBBBB" stroke-width="3" />
+  <line x1="170" y1="100" x2="190" y2="100" stroke="#BBBBBB" stroke-width="2" />
+  <line x1="170" y1="110" x2="190" y2="110" stroke="#BBBBBB" stroke-width="2" />
+  <line x1="170" y1="120" x2="190" y2="120" stroke="#BBBBBB" stroke-width="2" />
+  
+  <!-- Retail Store -->
+  <rect x="250" y="90" width="40" height="40" rx="5" fill="none" stroke="#BBBBBB" stroke-width="3" />
+  <path d="M250 105 L290 105" stroke="#BBBBBB" stroke-width="2" />
+  <path d="M260 90 L260 70 L280 70 L280 90" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  
+  <!-- Customer/End Point -->
+  <rect x="360" y="130" width="40" height="40" rx="20" fill="none" stroke="#BBBBBB" stroke-width="3" />
+  <circle cx="380" cy="140" r="5" fill="#BBBBBB" />
+  <path d="M370 155 L390 155" stroke="#BBBBBB" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Transportation elements -->
+  <rect x="115" y="140" width="30" height="20" rx="5" fill="#e61f34" />
+  <circle cx="120" cy="160" r="5" fill="#BBBBBB" />
+  <circle cx="140" cy="160" r="5" fill="#BBBBBB" />
+  
+  <rect x="295" y="140" width="30" height="20" rx="5" fill="#e61f34" />
+  <circle cx="300" cy="160" r="5" fill="#BBBBBB" />
+  <circle cx="320" cy="160" r="5" fill="#BBBBBB" />
+  
+  <!-- Data flow indicators -->
+  <circle cx="135" cy="110" r="8" fill="#F7F7F8" stroke="#e61f34" stroke-width="2" />
+  <circle cx="225" cy="80" r="8" fill="#F7F7F8" stroke="#e61f34" stroke-width="2" />
+  <circle cx="315" cy="110" r="8" fill="#F7F7F8" stroke="#e61f34" stroke-width="2" />
+  
+  <!-- Package elements -->
+  <rect x="205" y="170" width="40" height="40" fill="none" stroke="#BBBBBB" stroke-width="3" />
+  <line x1="205" y1="170" x2="245" y2="210" stroke="#BBBBBB" stroke-width="1" />
+  <line x1="205" y1="210" x2="245" y2="170" stroke="#BBBBBB" stroke-width="1" />
+  
+  <!-- Global/Network indicator -->
+  <circle cx="225" cy="150" r="20" fill="none" stroke="#e61f34" stroke-width="3" stroke-dasharray="5,5" />
+  <circle cx="225" cy="150" r="10" fill="#e61f34" opacity="0.2" />
+  
+  <!-- Directional arrows -->
+  <path d="M180 140 L185 135 L190 140" fill="none" stroke="#e61f34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M270 120 L275 125 L280 120" fill="none" stroke="#e61f34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M350 150 L355 145 L360 150" fill="none" stroke="#e61f34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

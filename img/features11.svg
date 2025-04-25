@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="341px" height="200px" viewBox="0 0 341 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(0.000000, 1.000000)">
+            <line x1="0" y1="66.5165746" x2="341" y2="66.5165746" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="0" y1="132.483425" x2="341" y2="132.483425" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="66" y1="115.991713" x2="110" y2="115.991713" id="Path" stroke="#BBBBBB" stroke-width="2.2" fill="#000000" fill-rule="nonzero"></line>
+            <polyline id="Path" stroke="#BBBBBB" stroke-width="2.2" fill="#EEEEEE" fill-rule="nonzero" points="88 115.991713 88 99.5 99 99.5 99 115.991713"></polyline>
+            <polyline id="Path" stroke="#BBBBBB" stroke-width="2.2" fill="#EEEEEE" fill-rule="nonzero" points="77 115.991713 77 104.997238 88 104.997238"></polyline>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="2.2" fill="#FFFFFF" fill-rule="nonzero" cx="66" cy="115.991713" rx="16.5" ry="16.4917127"></ellipse>
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="2.2" fill="#FFFFFF" fill-rule="nonzero" x="225.5" y="61.019337" width="110" height="76.961326"></rect>
+            <text id="7A91F3B4" fill="#BBBBBB" fill-rule="nonzero" font-family="Helvetica" font-size="11" font-weight="normal">
+                <tspan x="236.5" y="87.507785">7A91F3B4</tspan>
+            </text>
+            <text id="26D8CE05" fill="#BBBBBB" fill-rule="nonzero" font-family="Helvetica" font-size="11" font-weight="normal">
+                <tspan x="236.5" y="103.999498">26D8CE05</tspan>
+            </text>
+            <text id="9EF27A1C" fill="#BBBBBB" fill-rule="nonzero" font-family="Helvetica" font-size="11" font-weight="normal">
+                <tspan x="236.5" y="120.49121">9EF27A1C</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="2.2" fill="#FFFFFF" fill-rule="nonzero" x="154" y="17.0414365" width="33" height="27.4861878" rx="3.3"></rect>
+            <line x1="0" y1="0.549723757" x2="341" y2="0.549723757" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <path d="M159.5,17.0414365 L159.5,6.04696133 C159.5,-1.64917127 181.5,-1.64917127 181.5,6.04696133 L181.5,17.0414365" id="Path" stroke="#BBBBBB" stroke-width="2.2"></path>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.1" fill="#FFFFFF" fill-rule="nonzero" cx="170.5" cy="31.3342541" rx="4.4" ry="4.39779006"></ellipse>
+            <line x1="170.5" y1="44.5276243" x2="170.5" y2="61.019337" id="Path" stroke="#CCCCCC" stroke-width="1.65" fill="#000000" fill-rule="nonzero" stroke-dasharray="5.5,5.5"></line>
+            <line x1="66" y1="137.980663" x2="115.5" y2="137.980663" id="Path" stroke="#CCCCCC" stroke-width="1.65" fill="#000000" fill-rule="nonzero" stroke-dasharray="5.5,5.5"></line>
+            <line x1="77" y1="154.472376" x2="77" y2="176.461326" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="77" y1="176.461326" x2="143" y2="176.461326" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="143" y1="176.461326" x2="143" y2="137.980663" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="264" y1="154.472376" x2="264" y2="176.461326" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="264" y1="176.461326" x2="198" y2="176.461326" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="198" y1="176.461326" x2="198" y2="137.980663" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="0" y1="198.450276" x2="341" y2="198.450276" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000" fill-rule="nonzero"></line>
+            <rect id="Rectangle" stroke="#E61F34" stroke-width="3.3" fill="#FFFFFF" fill-rule="nonzero" x="115.5" y="61.019337" width="110" height="76.961326"></rect>
+            <text id="10110101" fill="#BBBBBB" fill-rule="nonzero" font-family="Helvetica" font-size="11" font-weight="normal">
+                <tspan x="126.5" y="87.507785">10110101</tspan>
+            </text>
+            <text id="01001110" fill="#BBBBBB" fill-rule="nonzero" font-family="Helvetica" font-size="11" font-weight="normal">
+                <tspan x="126.5" y="103.999498">01001110</tspan>
+            </text>
+            <text id="11010010" fill="#BBBBBB" fill-rule="nonzero" font-family="Helvetica" font-size="11" font-weight="normal">
+                <tspan x="126.5" y="120.49121">11010010</tspan>
+            </text>
+            <line x1="192.5" y1="99.5" x2="225.5" y2="99.5" id="Path" stroke="#CCCCCC" stroke-width="2.2" fill="#000000" fill-rule="nonzero"></line>
+            <polygon id="Path" stroke="#CCCCCC" stroke-width="1.1" fill="#CCCCCC" fill-rule="nonzero" points="225.5 99.5 218.9 95.1022099 218.9 103.89779"></polygon>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.1" fill="#FFFFFF" fill-rule="nonzero" cx="115.5" cy="99.5" rx="3.3" ry="3.29834254"></ellipse>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.1" fill="#FFFFFF" fill-rule="nonzero" cx="170.5" cy="61.019337" rx="3.3" ry="3.29834254"></ellipse>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.1" fill="#FFFFFF" fill-rule="nonzero" cx="170.5" cy="137.980663" rx="3.3" ry="3.29834254"></ellipse>
+            <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.1" fill="#FFFFFF" fill-rule="nonzero" cx="225.5" cy="99.5" rx="3.3" ry="3.29834254"></ellipse>
+        </g>
+    </g>
+</svg>

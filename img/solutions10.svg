@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="238px" viewBox="0 0 480 238" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-207.000000, -883.000000)">
+            <g id="Group-2" transform="translate(207.000000, 885.000000)">
+                <rect id="Rectangle" fill="#F7F7F8" fill-rule="nonzero" x="0" y="198" width="480" height="4.8" rx="2.4"></rect>
+                <line x1="54" y1="174" x2="426" y2="174" id="Path" stroke="#BBBBBB" stroke-width="2.4" fill="#000000" fill-rule="nonzero" stroke-linecap="round"></line>
+                <line x1="54" y1="30" x2="54" y2="174" id="Path" stroke="#BBBBBB" stroke-width="2.4" fill="#000000" fill-rule="nonzero" stroke-linecap="round"></line>
+                <polygon id="Path" fill="#E61F34" fill-rule="nonzero" opacity="0.08" points="54 150 114 144 174 132 234 108 294 72 354 24 414 0 414 174 54 174"></polygon>
+                <line x1="54" y1="174" x2="54" y2="180" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="114" y1="174" x2="114" y2="180" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="174" y1="174" x2="174" y2="180" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="234" y1="174" x2="234" y2="180" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="294" y1="174" x2="294" y2="180" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="354" y1="174" x2="354" y2="180" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="414" y1="174" x2="414" y2="180" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="48" y1="150" x2="54" y2="150" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="48" y1="126" x2="54" y2="126" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="48" y1="102" x2="54" y2="102" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="48" y1="78" x2="54" y2="78" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="48" y1="54" x2="54" y2="54" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="48" y1="30" x2="54" y2="30" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="102" cy="42" r="9.6"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="84" cy="48" r="7.2"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="120" cy="48" r="7.2"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="102" cy="66" r="4.8"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="186" cy="42" r="9.6"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="168" cy="48" r="7.2"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="204" cy="48" r="7.2"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="180" cy="66" r="4.8"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="192" cy="66" r="4.8"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="162" cy="60" r="4.8"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="210" cy="60" r="4.8"></circle>
+                <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.8" x="306" y="24" width="36" height="12"></rect>
+                <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.8" x="306" y="36" width="60" height="12"></rect>
+                <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.8" x="306" y="48" width="84" height="12"></rect>
+                <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.8" x="306" y="60" width="72" height="12"></rect>
+                <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.8" x="306" y="72" width="48" height="12"></rect>
+                <rect id="Rectangle" fill="#E61F34" fill-rule="nonzero" opacity="0.3" x="306" y="24" width="18" height="12"></rect>
+                <rect id="Rectangle" fill="#E61F34" fill-rule="nonzero" opacity="0.3" x="306" y="36" width="30" height="12"></rect>
+                <rect id="Rectangle" fill="#E61F34" fill-rule="nonzero" opacity="0.3" x="306" y="48" width="42" height="12"></rect>
+                <rect id="Rectangle" fill="#E61F34" fill-rule="nonzero" opacity="0.3" x="306" y="60" width="36" height="12"></rect>
+                <rect id="Rectangle" fill="#E61F34" fill-rule="nonzero" opacity="0.3" x="306" y="72" width="24" height="12"></rect>
+                <line x1="24" y1="90" x2="36" y2="90" id="Path" stroke="#BBBBBB" stroke-width="1.2" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="24" y1="96" x2="36" y2="96" id="Path" stroke="#BBBBBB" stroke-width="1.2" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="24" y1="102" x2="30" y2="102" id="Path" stroke="#BBBBBB" stroke-width="1.2" fill="#000000" fill-rule="nonzero"></line>
+                <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.8" x="234" y="78" width="36" height="48"></rect>
+                <line x1="228" y1="126" x2="276" y2="126" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <polyline id="Path" stroke="#BBBBBB" stroke-width="1.8" points="414 78 390 78 390 66 372 78 390 90 390 78"></polyline>
+                <polyline id="Path" stroke="#BBBBBB" stroke-width="1.8" points="372 102 396 102 396 114 414 102 396 90 396 102"></polyline>
+                <circle id="Oval" fill="#E61F34" fill-rule="nonzero" cx="414" cy="78" r="4.8"></circle>
+                <circle id="Oval" fill="#E61F34" fill-rule="nonzero" cx="372" cy="102" r="4.8"></circle>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="246" cy="198" r="18"></circle>
+                <line x1="246" y1="198" x2="246" y2="180" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="246" y1="198" x2="260.4" y2="207.6" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="246" y1="198" x2="234" y2="216" id="Path" stroke="#BBBBBB" stroke-width="1.8" fill="#000000" fill-rule="nonzero"></line>
+                <circle id="Oval" fill="#E61F34" fill-rule="nonzero" cx="246" cy="198" r="3.6"></circle>
+                <polygon id="Path" stroke="#BBBBBB" stroke-width="1.8" points="162 210 186 210 186 234 174 228 162 234"></polygon>
+                <line x1="168" y1="216" x2="180" y2="216" id="Path" stroke="#BBBBBB" stroke-width="1.2" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="168" y1="219.6" x2="180" y2="219.6" id="Path" stroke="#BBBBBB" stroke-width="1.2" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="168" y1="223.2" x2="174" y2="223.2" id="Path" stroke="#BBBBBB" stroke-width="1.2" fill="#000000" fill-rule="nonzero"></line>
+                <circle id="Oval" stroke="#BBBBBB" stroke-width="1.8" cx="330" cy="198" r="18"></circle>
+                <line x1="330" y1="180" x2="330" y2="216" id="Path" stroke="#BBBBBB" stroke-width="1.2" fill="#000000" fill-rule="nonzero"></line>
+                <line x1="312" y1="198" x2="348" y2="198" id="Path" stroke="#BBBBBB" stroke-width="1.2" fill="#000000" fill-rule="nonzero"></line>
+                <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.2" cx="330" cy="198" rx="12" ry="18"></ellipse>
+                <ellipse id="Oval" stroke="#BBBBBB" stroke-width="1.2" cx="330" cy="198" rx="18" ry="6"></ellipse>
+                <polyline id="Path" stroke="#E61F34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="54 150 114 144 174 132 234 108 294 72 354 24 414 0"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

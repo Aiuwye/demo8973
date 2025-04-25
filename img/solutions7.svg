@@ -1,0 +1,82 @@
+<svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background elements -->
+  <rect x="25" y="220" width="400" height="4" rx="2" fill="#F7F7F8" />
+  
+  <!-- Central Server/Management Hub -->
+  <rect x="190" y="110" width="70" height="80" rx="5" fill="none" stroke="#BBBBBB" stroke-width="3" />
+  <line x1="200" y1="125" x2="250" y2="125" stroke="#BBBBBB" stroke-width="2" />
+  <line x1="200" y1="140" x2="250" y2="140" stroke="#BBBBBB" stroke-width="2" />
+  <line x1="200" y1="155" x2="250" y2="155" stroke="#BBBBBB" stroke-width="2" />
+  <line x1="200" y1="170" x2="230" y2="170" stroke="#BBBBBB" stroke-width="2" />
+  
+  <!-- Connection lines to devices -->
+  <line x1="190" y1="150" x2="100" y2="90" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="5,3" />
+  <line x1="190" y1="150" x2="80" y2="150" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="5,3" />
+  <line x1="190" y1="150" x2="100" y2="210" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="5,3" />
+  
+  <line x1="260" y1="150" x2="350" y2="90" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="5,3" />
+  <line x1="260" y1="150" x2="370" y2="150" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="5,3" />
+  <line x1="260" y1="150" x2="350" y2="210" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="5,3" />
+  
+  <!-- Computer/Desktop Device -->
+  <rect x="60" y="70" width="40" height="35" rx="2" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <rect x="65" y="75" width="30" height="20" fill="#F7F7F8" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="70" y="105" width="20" height="5" fill="none" stroke="#BBBBBB" stroke-width="1.5" />
+  
+  <!-- Tablet Device -->
+  <rect x="50" y="130" width="30" height="40" rx="3" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <rect x="55" y="135" width="20" height="25" fill="#F7F7F8" stroke="#BBBBBB" stroke-width="1" />
+  <circle cx="65" cy="165" r="3" fill="#BBBBBB" />
+  
+  <!-- Smartphone Device -->
+  <rect x="80" y="200" width="20" height="35" rx="3" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <rect x="83" y="205" width="14" height="20" fill="#F7F7F8" stroke="#BBBBBB" stroke-width="1" />
+  <circle cx="90" cy="230" r="2.5" fill="#BBBBBB" />
+  
+  <!-- Laptop Device -->
+  <path d="M330 90 L370 90 L370 110 L330 110 Z" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <path d="M325 110 L375 110 L372 120 L328 120 Z" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <line x1="335" y1="100" x2="365" y2="100" stroke="#BBBBBB" stroke-width="1.5" />
+  
+  <!-- IoT Device -->
+  <circle cx="370" cy="150" r="15" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <circle cx="370" cy="150" r="5" fill="#BBBBBB" />
+  <path d="M355 145 A15 15 0 0 1 385 145" fill="none" stroke="#BBBBBB" stroke-width="1" stroke-dasharray="2,2" />
+  <path d="M355 155 A15 15 0 0 0 385 155" fill="none" stroke="#BBBBBB" stroke-width="1" stroke-dasharray="2,2" />
+  
+  <!-- Printer Device -->
+  <rect x="330" y="190" width="40" height="30" rx="2" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <rect x="340" y="195" width="20" height="5" fill="none" stroke="#BBBBBB" stroke-width="1.5" />
+  <rect x="335" y="205" width="30" height="10" fill="#F7F7F8" stroke="#BBBBBB" stroke-width="1.5" />
+  
+  <!-- Active connection indicators -->
+  <circle cx="100" cy="90" r="5" fill="#e61f34" />
+  <circle cx="80" cy="150" r="5" fill="#e61f34" />
+  <circle cx="100" cy="210" r="5" fill="#e61f34" />
+  <circle cx="350" cy="90" r="5" fill="#e61f34" />
+  <circle cx="370" cy="150" r="5" fill="#e61f34" />
+  <circle cx="350" cy="210" r="5" fill="#e61f34" />
+  
+  <!-- Central hub active indicator -->
+  <circle cx="225" cy="110" r="6" fill="#e61f34" />
+  
+  <!-- Update/Sync Symbol -->
+  <circle cx="225" cy="70" r="15" fill="none" stroke="#e61f34" stroke-width="2" />
+  <path d="M220 70 A5 5 0 0 1 230 70 A5 5 0 0 1 220 70" fill="none" stroke="#e61f34" stroke-width="2" />
+  <path d="M215 70 L220 65 L225 70" fill="none" stroke="#e61f34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M225 70 L230 75 L235 70" fill="none" stroke="#e61f34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Security shield -->
+  <path d="M225 210 L240 200 L255 210 L255 235 L240 245 L225 235 Z" fill="none" stroke="#e61f34" stroke-width="2" />
+  <path d="M240 215 L240 230" stroke="#e61f34" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="240" cy="235" r="1.5" fill="#e61f34" />
+  
+  <!-- Management interface elements -->
+  <rect x="130" y="40" width="50" height="30" rx="3" fill="#F7F7F8" stroke="#BBBBBB" stroke-width="1.5" />
+  <line x1="140" y1="50" x2="170" y2="50" stroke="#BBBBBB" stroke-width="1.5" />
+  <line x1="140" y1="60" x2="160" y2="60" stroke="#BBBBBB" stroke-width="1.5" />
+  
+  <rect x="270" y="40" width="50" height="30" rx="3" fill="#F7F7F8" stroke="#BBBBBB" stroke-width="1.5" />
+  <line x1="280" y1="50" x2="310" y2="50" stroke="#BBBBBB" stroke-width="1.5" />
+  <line x1="280" y1="60" x2="300" y2="60" stroke="#BBBBBB" stroke-width="1.5" />
+</svg>

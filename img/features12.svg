@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="341px" height="199px" viewBox="0 0 341 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" fill-rule="nonzero">
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="1.65" fill="#FFFFFF" x="115.5" y="66.5165746" width="22" height="10.9944751"></rect>
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="1.65" fill="#FFFFFF" x="159.5" y="66.5165746" width="22" height="10.9944751"></rect>
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="1.65" fill="#FFFFFF" x="203.5" y="66.5165746" width="22" height="10.9944751"></rect>
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="1.65" fill="#FFFFFF" x="115.5" y="143.477901" width="22" height="10.9944751"></rect>
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="1.65" fill="#FFFFFF" x="159.5" y="143.477901" width="22" height="10.9944751"></rect>
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="1.65" fill="#FFFFFF" x="203.5" y="143.477901" width="22" height="10.9944751"></rect>
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="1.65" fill="#FFFFFF" x="88" y="94.0027624" width="11" height="21.9889503"></rect>
+            <rect id="Rectangle" stroke="#CCCCCC" stroke-width="1.65" fill="#FFFFFF" x="242" y="94.0027624" width="11" height="21.9889503"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="2.2" fill="#FFFFFF" x="27.5" y="33.5331492" width="44" height="32.9834254" rx="3.3"></rect>
+            <line x1="38.5" y1="44.5276243" x2="60.5" y2="44.5276243" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <line x1="38.5" y1="55.5220994" x2="60.5" y2="55.5220994" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="2.2" fill="#FFFFFF" x="27.5" y="132.483425" width="44" height="32.9834254" rx="3.3"></rect>
+            <line x1="38.5" y1="143.477901" x2="60.5" y2="143.477901" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <line x1="38.5" y1="154.472376" x2="60.5" y2="154.472376" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="2.2" fill="#FFFFFF" x="269.5" y="33.5331492" width="44" height="32.9834254" rx="3.3"></rect>
+            <line x1="280.5" y1="44.5276243" x2="302.5" y2="44.5276243" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <line x1="280.5" y1="55.5220994" x2="302.5" y2="55.5220994" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="2.2" fill="#FFFFFF" x="269.5" y="132.483425" width="44" height="32.9834254" rx="3.3"></rect>
+            <line x1="280.5" y1="143.477901" x2="302.5" y2="143.477901" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <line x1="280.5" y1="154.472376" x2="302.5" y2="154.472376" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <line x1="71.5" y1="50.0248619" x2="115.5" y2="72.0138122" id="Path" stroke="#CCCCCC" stroke-width="1.65" fill="#000000" stroke-dasharray="5.5,5.5"></line>
+            <line x1="71.5" y1="148.975138" x2="115.5" y2="148.975138" id="Path" stroke="#CCCCCC" stroke-width="1.65" fill="#000000" stroke-dasharray="5.5,5.5"></line>
+            <line x1="269.5" y1="50.0248619" x2="225.5" y2="72.0138122" id="Path" stroke="#CCCCCC" stroke-width="1.65" fill="#000000" stroke-dasharray="5.5,5.5"></line>
+            <line x1="269.5" y1="148.975138" x2="225.5" y2="148.975138" id="Path" stroke="#CCCCCC" stroke-width="1.65" fill="#000000" stroke-dasharray="5.5,5.5"></line>
+            <polygon id="Path" stroke="#BBBBBB" stroke-width="1.65" fill="#FFFFFF" points="126.5 33.5331492 126.5 22.538674 137.5 22.538674 137.5 33.5331492 148.5 33.5331492 148.5 44.5276243 137.5 44.5276243 137.5 55.5220994 126.5 55.5220994 126.5 44.5276243 115.5 44.5276243 115.5 33.5331492"></polygon>
+            <polygon id="Path" stroke="#BBBBBB" stroke-width="1.65" fill="#FFFFFF" points="203.5 33.5331492 203.5 22.538674 214.5 22.538674 214.5 33.5331492 225.5 33.5331492 225.5 44.5276243 214.5 44.5276243 214.5 55.5220994 203.5 55.5220994 203.5 44.5276243 192.5 44.5276243 192.5 33.5331492"></polygon>
+            <polygon id="Path" stroke="#BBBBBB" stroke-width="1.65" fill="#FFFFFF" points="126.5 165.466851 126.5 154.472376 137.5 154.472376 137.5 165.466851 148.5 165.466851 148.5 176.461326 137.5 176.461326 137.5 187.455801 126.5 187.455801 126.5 176.461326 115.5 176.461326 115.5 165.466851"></polygon>
+            <polygon id="Path" stroke="#BBBBBB" stroke-width="1.65" fill="#FFFFFF" points="203.5 165.466851 203.5 154.472376 214.5 154.472376 214.5 165.466851 225.5 165.466851 225.5 176.461326 214.5 176.461326 214.5 187.455801 203.5 187.455801 203.5 176.461326 192.5 176.461326 192.5 165.466851"></polygon>
+            <line x1="0" y1="0.549723757" x2="341" y2="0.549723757" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000"></line>
+            <line x1="0" y1="66.5165746" x2="341" y2="66.5165746" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000"></line>
+            <line x1="0" y1="132.483425" x2="341" y2="132.483425" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000"></line>
+            <line x1="0" y1="198.450276" x2="341" y2="198.450276" id="Path" stroke="#EAEAEA" stroke-width="1.1" fill="#000000"></line>
+            <rect id="Rectangle" stroke="#E61F34" stroke-width="3.3" fill="#FFFFFF" x="88" y="66.5165746" width="165" height="87.9558011"></rect>
+            <line x1="137.5" y1="110.494475" x2="203.5" y2="110.494475" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+            <line x1="126.5" y1="121.48895" x2="214.5" y2="121.48895" id="Path" stroke="#BBBBBB" stroke-width="1.1" fill="#000000"></line>
+        </g>
+    </g>
+</svg>

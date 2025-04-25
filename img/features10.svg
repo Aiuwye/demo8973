@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="372px" height="217px" viewBox="0 0 372 217" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" fill-rule="nonzero">
+            <line x1="96" y1="60.5441989" x2="126" y2="84.5220994" id="Path" stroke="#CCCCCC" stroke-width="2.4" fill="#000000" stroke-dasharray="6,6"></line>
+            <line x1="96" y1="168.444751" x2="126" y2="144.466851" id="Path" stroke="#CCCCCC" stroke-width="2.4" fill="#000000" stroke-dasharray="6,6"></line>
+            <line x1="264" y1="60.5441989" x2="246" y2="84.5220994" id="Path" stroke="#CCCCCC" stroke-width="2.4" fill="#000000" stroke-dasharray="6,6"></line>
+            <line x1="264" y1="168.444751" x2="246" y2="144.466851" id="Path" stroke="#CCCCCC" stroke-width="2.4" fill="#000000" stroke-dasharray="6,6"></line>
+            <line x1="0" y1="0.599447514" x2="372" y2="0.599447514" id="Path" stroke="#EAEAEA" stroke-width="1.2" fill="#000000"></line>
+            <line x1="0" y1="72.5331492" x2="372" y2="72.5331492" id="Path" stroke="#EAEAEA" stroke-width="1.2" fill="#000000"></line>
+            <line x1="0" y1="144.466851" x2="372" y2="144.466851" id="Path" stroke="#EAEAEA" stroke-width="1.2" fill="#000000"></line>
+            <line x1="0" y1="216.400552" x2="372" y2="216.400552" id="Path" stroke="#EAEAEA" stroke-width="1.2" fill="#000000"></line>
+            <rect id="Rectangle" stroke="#E61F34" stroke-width="3.6" fill="#FFFFFF" x="126" y="49" width="120" height="155.856354"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="144" y="72.5331492" width="18" height="17.9834254"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="177" y="72.5331492" width="18" height="17.9834254"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="210" y="72.5331492" width="18" height="17.9834254"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="144" y="108.5" width="18" height="17.9834254"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="177" y="108.5" width="18" height="17.9834254"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="210" y="108.5" width="18" height="17.9834254"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="144" y="144.466851" width="18" height="17.9834254"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="177" y="144.466851" width="18" height="17.9834254"></rect>
+            <rect id="Rectangle" stroke="#BBBBBB" stroke-width="1.2" fill="#FFFFFF" x="210" y="144.466851" width="18" height="17.9834254"></rect>
+            <path d="M36,36.5662983 L84,36.5662983 C92,36.5662983 96,40.5626151 96,48.5552486 L96,72.5331492 C96,80.5257827 92,84.5220994 84,84.5220994 L48,84.5220994 L36,102.505525 L36,84.5220994 L36,84.5220994 C28,84.5220994 24,80.5257827 24,72.5331492 L24,48.5552486 C24,40.5626151 28,36.5662983 36,36.5662983 Z" id="Path" stroke="#BBBBBB" stroke-width="2.4" fill="#FFFFFF"></path>
+            <path d="M276,36.5662983 L324,36.5662983 C332,36.5662983 336,40.5626151 336,48.5552486 L336,72.5331492 C336,80.5257827 332,84.5220994 324,84.5220994 L288,84.5220994 L276,102.505525 L276,84.5220994 L276,84.5220994 C268,84.5220994 264,80.5257827 264,72.5331492 L264,48.5552486 C264,40.5626151 268,36.5662983 276,36.5662983 Z" id="Path" stroke="#BBBBBB" stroke-width="2.4" fill="#FFFFFF"></path>
+            <path d="M36,144.466851 L84,144.466851 C92,144.466851 96,148.463168 96,156.455801 L96,180.433702 C96,188.426335 92,192.422652 84,192.422652 L48,192.422652 L36,210.406077 L36,192.422652 L36,192.422652 C28,192.422652 24,188.426335 24,180.433702 L24,156.455801 C24,148.463168 28,144.466851 36,144.466851 Z" id="Path" stroke="#BBBBBB" stroke-width="2.4" fill="#FFFFFF"></path>
+            <path d="M276,144.466851 L324,144.466851 C332,144.466851 336,148.463168 336,156.455801 L336,180.433702 C336,188.426335 332,192.422652 324,192.422652 L288,192.422652 L276,210.406077 L276,192.422652 L276,192.422652 C268,192.422652 264,188.426335 264,180.433702 L264,156.455801 C264,148.463168 268,144.466851 276,144.466851 Z" id="Path" stroke="#BBBBBB" stroke-width="2.4" fill="#FFFFFF"></path>
+            <line x1="42" y1="54.5497238" x2="78" y2="54.5497238" id="Path" stroke="#CCCCCC" stroke-width="1.8" fill="#000000"></line>
+            <line x1="42" y1="66.538674" x2="78" y2="66.538674" id="Path" stroke="#CCCCCC" stroke-width="1.8" fill="#000000"></line>
+            <line x1="282" y1="54.5497238" x2="318" y2="54.5497238" id="Path" stroke="#CCCCCC" stroke-width="1.8" fill="#000000"></line>
+            <line x1="282" y1="66.538674" x2="318" y2="66.538674" id="Path" stroke="#CCCCCC" stroke-width="1.8" fill="#000000"></line>
+            <line x1="42" y1="162.450276" x2="78" y2="162.450276" id="Path" stroke="#CCCCCC" stroke-width="1.8" fill="#000000"></line>
+            <line x1="42" y1="174.439227" x2="78" y2="174.439227" id="Path" stroke="#CCCCCC" stroke-width="1.8" fill="#000000"></line>
+            <line x1="282" y1="162.450276" x2="318" y2="162.450276" id="Path" stroke="#CCCCCC" stroke-width="1.8" fill="#000000"></line>
+            <line x1="282" y1="174.439227" x2="318" y2="174.439227" id="Path" stroke="#CCCCCC" stroke-width="1.8" fill="#000000"></line>
+        </g>
+    </g>
+</svg>
