@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinAxis AI - 应用案例</title>
+    <link rel="shortcut icon" href="../../img/icon.png">
+    <style>
+        :root {
+            --primary: #e61f34;
+            --primary-dark: #c51a2c;
+            --secondary: #1a73e8;
+            --dark: #333;
+            --light: #f7f8f9;
+            --gray: #eaeaea;
+            --text: #333;
+            --text-light: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: #f8f8f8;
+            color: var(--primary-dark);
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #222;
+            text-decoration: none;
+        }
+        .logo span{
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links .active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 160px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+
+        /* Industry Tabs */
+        .industry-tabs {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+        
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .tab {
+            padding: 15px 30px;
+            background: white;
+            border-radius: 30px;
+            border: 1px solid var(--gray);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .tab:hover, .tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* Case Study Section */
+        .case-study-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .case-study-section:nth-child(even) {
+            background-color: var(--light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Featured Case */
+        .featured-case {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 80px;
+        }
+        
+        .featured-case-inner {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .featured-case-image {
+            height: 400px;
+            background-color: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .featured-case-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .featured-case-content {
+            padding: 40px;
+        }
+        
+        .case-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .case-tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .featured-case-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .case-stats {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+        
+        /* Case Grid */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .case-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .case-image {
+            height: 200px;
+            background-color: var(--gray);
+            overflow: hidden;
+        }
+        
+        .case-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .case-content {
+            padding: 25px;
+        }
+        
+        .case-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            margin: 20px;
+        }
+        
+        .testimonial-content {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-content:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info {
+            text-align: left;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .author-title {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Results Section */
+        .results-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .result-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .result-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .result-label {
+            font-size: 1.2rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+        }
+        
+        .cta .btn {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .cta .btn:hover {
+            background: var(--light);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 70px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .featured-case-inner {
+                flex-direction: column;
+            }
+            
+            .featured-case-image, 
+            .featured-case-content {
+                width: 100%;
+            }
+            
+            .case-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header {
+                padding: 130px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .featured-case-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .stat-value {
+                font-size: 2rem;
+            }
+        }
+        /* Language Switcher Styles */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .language-btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            background: transparent;
+            border: 1px solid var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .language-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            font-weight: 400;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="javascript:void(0)" class="logo">WinAxis <span>AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../../cn/">首页</a></li>
+                <li><a href="../../features/cn/">功能特性</a></li>
+                <li><a href="../../solutions/cn/">解决方案</a></li>
+                <li><a href="javascript:void(0)" class="active">应用案例</a></li>
+                <li><a href="../../pricing/cn/">价格方案</a></li>
+                <li><a href="../../contact/cn/">联系我们</a></li>
+                <li class="language-switcher">
+                    <button class="language-btn" onclick="window.location.href='../'">EN</button>
+                    <button class="language-btn active" onclick="">中文</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>客户成功案例</h1>
+            <p>探索各行业领先企业如何利用WinAxis AI实现数据驱动转型，创造实际商业价值</p>
+        </div>
+    </section>
+
+    <!-- Industry Tabs -->
+    <section class="industry-tabs">
+        <div class="container">
+            <div class="tab-container">
+                <div class="tab active">所有案例</div>
+                <div class="tab">博彩行业</div>
+                <div class="tab">零售与电商</div>
+                <div class="tab">金融服务</div>
+                <div class="tab">制造业</div>
+                <div class="tab">医疗健康</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case - Gaming Industry -->
+    <section class="case-study-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>博彩行业案例</h2>
+                <p>探索领先博彩公司如何利用AI驱动的分析解决方案优化玩家体验并提高业务绩效</p>
+            </div>
+            
+            <div class="featured-case">
+                <div class="featured-case-image">
+                    <img src="/api/placeholder/1200/400" alt="博彩数据分析仪表板" />
+                </div>
+                <div class="featured-case-content">
+                    <div class="case-meta">
+                        <div class="case-tag">博彩行业</div>
+                        <div class="case-tag">玩家分析</div>
+                        <div class="case-tag">个性化</div>
+                    </div>
+                    <h3>某全球博彩巨头通过AI提升玩家参与度，收入增长32%</h3>
+                    <p>作为一家领先的在线博彩运营商，该公司面临着激烈的市场竞争和不断变化的监管环境。他们需要一种方法来增加玩家参与度，提高留存率，同时确保合规性和负责任博彩实践。</p>
+                    <p>通过实施WinAxis AI的高级玩家分析平台，该公司能够深入了解玩家行为，开发高度个性化的用户旅程，并实时预测流失风险。系统还帮助他们识别潜在的问题博彩模式，支持其负责任博彩举措。</p>
+                    
+                    <div class="case-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">32%</div>
+                            <div class="stat-label">收入增长</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">47%</div>
+                            <div class="stat-label">玩家活跃度提升</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">28%</div>
+                            <div class="stat-label">流失率降低</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">64%</div>
+                            <div class="stat-label">风险识别准确率提升</div>
+                        </div>
+                    </div>
+                    
+                    <p>"WinAxis AI的解决方案彻底改变了我们数据使用和个性化策略的方式。我们现在不仅能够提供更好的玩家体验，还能更早地识别风险，这对我们的业务和声誉都至关重要。" - 某全球博彩公司首席数据官</p>
+                    <a href="#full-case-study" class="btn">查看完整案例</a>
+                </div>
+            </div>
+            
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/api/placeholder/350/200" alt="玩家行为分析" />
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <div class="case-tag">博彩行业</div>
+                        </div>
+                        <h3>亚洲领先博彩平台优化用户获取成本降低41%</h3>
+                        <p>通过实施WinAxis AI的智能营销分析解决方案，该平台能够更准确地预测用户价值，优化营销支出，实现更高的投资回报率。</p>
+                        <a href="#case-study" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/api/placeholder/350/200" alt="欺诈检测系统" />
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <div class="case-tag">博彩行业</div>
+                        </div>
+                        <h3>欧洲博彩运营商通过AI欺诈检测系统节省1700万美元</h3>
+                        <p>WinAxis AI的实时欺诈检测系统帮助该公司识别并阻止了复杂的欺诈模式，显著减少了财务损失，同时维护了平台的诚信度。</p>
+                        <a href="#case-study" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retail Case Studies -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>零售与电商案例</h2>
+                <p>探索领先零售企业如何利用AI驱动的分析解决方案提升客户体验并优化运营</p>
+            </div>
+            
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/api/placeholder/350/200" alt="电商个性化" />
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <div class="case-tag">零售</div>
+                        </div>
+                        <h3>全球时尚零售商转化率提高37%</h3>
+                        <p>通过部署WinAxis AI的个性化推荐引擎，该零售商实现了显著的转化率提升和购物篮价值增长，同时减少了15%的退货率。</p>
+                        <a href="#case-study" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/api/placeholder/350/200" alt="库存优化" />
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <div class="case-tag">零售</div>
+                        </div>
+                        <h3>大型零售连锁店库存成本降低23%</h3>
+                        <p>WinAxis AI的需求预测和库存优化解决方案帮助该连锁店减少了库存持有成本，同时将断货情况减少了42%，显著提高了客户满意度。</p>
+                        <a href="#case-study" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/api/placeholder/350/200" alt="客户细分" />
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <div class="case-tag">电商</div>
+                        </div>
+                        <h3>跨国电商平台提高客户终身价值18%</h3>
+                        <p>通过实施WinAxis AI的高级客户细分和生命周期管理解决方案，该平台能够更有效地培养高价值客户关系，提高复购率和整体客户价值。</p>
+                        <a href="#case-study" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Services Case Studies -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>金融服务案例</h2>
+                <p>探索金融机构如何利用WinAxis AI提升风险管理、客户体验和运营效率</p>
+            </div>
+            
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/api/placeholder/350/200" alt="欺诈检测" />
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <div class="case-tag">银行</div>
+                        </div>
+                        <h3>领先银行欺诈损失减少62%</h3>
+                        <p>WinAxis AI的风险分析解决方案帮助该银行实现了对欺诈交易的实时检测，显著减少了欺诈损失，同时将误报率降低了30%。</p>
+                        <a href="#case-study" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/api/placeholder/350/200" alt="财富管理" />
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <div class="case-tag">财富管理</div>
+                        </div>
+                        <h3>全球资产管理公司客户满意度提升29%</h3>
+                        <p>通过使用WinAxis AI的投资组合优化和客户洞察平台，该公司能够提供更个性化的投资建议，显著提高了客户满意度和资产留存率。</p>
+                        <a href="#case-study" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/api/placeholder/350/200" alt="保险定价" />
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <div class="case-tag">保险</div>
+                        </div>
+                        <h3>大型保险公司承保利润提高21%</h3>
+                        <p>WinAxis AI的高级风险建模和定价优化解决方案帮助该保险公司改进风险评估，实现更精准的定价，提高承保利润并扩大市场份额。</p>
+                        <a href="#case-study" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>客户评价</h2>
+                <p>听听我们客户对WinAxis AI的评价</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "WinAxis AI彻底改变了我们分析和利用数据的方式。以前需要数据科学团队数周完成的工作，现在我们的业务用户几分钟就能完成，而且没有技术障碍。这不仅提高了我们的效率，还使我们能够做出更快、更明智的决策。"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/api/placeholder/60/60" alt="张女士" />
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">张女士</div>
+                            <div class="author-title">某领先博彩平台数据总监</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Overview -->
+    <section class="results-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>客户成果概览</h2>
+                <p>我们的解决方案为客户带来的实际业务价值</p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-value">35%</div>
+                    <div class="result-label">平均收入增长</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">42%</div>
+                    <div class="result-label">平均运营效率提升</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">27%</div>
+                    <div class="result-label">平均成本节约</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">5倍</div>
+                    <div class="result-label">平均ROI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>准备好开始您的成功案例了吗？</h2>
+            <p>联系我们，了解WinAxis AI如何帮助您的组织实现数据驱动转型</p>
+            <a href="#contact" class="btn">预约演示</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>WinAxis AI</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">我们的团队</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">AI助手</a></li>
+                        <li><a href="#">数据探索器</a></li>
+                        <li><a href="#">仪表盘创建器</a></li>
+                        <li><a href="#">企业解决方案</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">文档</a></li>
+                        <li><a href="#">API参考</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                        <li><a href="#">博客</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">安全</a></li>
+                        <li><a href="#">合规</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 WinAxis AI. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
