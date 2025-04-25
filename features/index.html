@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinAxis AI - Features</title>
+    <link rel="shortcut icon" href="../img/icon.png">
+    <style>
+        :root {
+            --primary: #e61f34;
+            --primary-dark: #c51a2c;
+            --secondary: #1a73e8;
+            --dark: #333;
+            --light: #f7f8f9;
+            --gray: #eaeaea;
+            --text: #333;
+            --text-light: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: #f8f8f8;
+            color: var(--primary-dark);
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #222;
+            text-decoration: none;
+        }
+        .logo span{
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links .active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Language Switcher Styles */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .language-btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            background: transparent;
+            border: 1px solid var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .language-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            font-weight: 400;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 160px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+        
+        /* Feature Categories */
+        .feature-categories {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+        
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .category-tab {
+            padding: 12px 25px;
+            background: white;
+            border-radius: 30px;
+            border: 1px solid var(--gray);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .category-tab:hover, .category-tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* Core Features Section */
+        .feature-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .feature-section:nth-child(even) {
+            background-color: var(--light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .feature-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .feature-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .feature-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .feature-content {
+            flex: 1;
+            padding: 0 40px;
+        }
+        
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .feature-content p {
+            margin-bottom: 25px;
+        }
+        
+        .feature-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .feature-image img {
+            max-width: 100%;
+            border-radius: 10px;
+/*            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);*/
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .feature-list li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* Comparison Table */
+        .comparison {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table th:first-child {
+            width: 30%;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table td:first-child {
+            font-weight: 500;
+        }
+        
+        .comparison-table .check {
+            color: #22c55e;
+            font-weight: bold;
+        }
+        
+        .comparison-table .cross {
+            color: #ef4444;
+        }
+        
+        /* Technical Specs */
+        .tech-specs {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .spec-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .spec-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .spec-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .spec-details {
+            list-style: none;
+        }
+        
+        .spec-details li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        
+        .spec-label {
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+        }
+        
+        .cta .btn {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .cta .btn:hover {
+            background: var(--light);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 70px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .feature-row {
+                flex-direction: column;
+            }
+            
+            .feature-row:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .feature-content, .feature-image {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 40px;
+            }
+            
+            .comparison-table {
+                overflow-x: auto;
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header {
+                padding: 130px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">WinAxis <span>AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="javascript:void(0)" class="active">Features</a></li>
+                <li><a href="../solutions/">Solutions</a></li>
+                <li><a href="../cases/">Use Cases</a></li>
+                <li><a href="../pricing/">Pricing</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li class="language-switcher">
+                    <button class="language-btn active" onclick="">EN</button>
+                    <button class="language-btn" onclick="window.location.href='cn'">中文</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Powerful AI-Driven Features</h1>
+            <p>Discover how WinAxis AI transforms raw data into actionable insights with our comprehensive suite of intelligent analytics tools.</p>
+        </div>
+    </section>
+
+    <!-- Feature Categories -->
+    <section class="feature-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <div class="category-tab active">All Features</div>
+                <div class="category-tab">Data Integration</div>
+                <div class="category-tab">AI Assistants</div>
+                <div class="category-tab">Visualization</div>
+                <div class="category-tab">Enterprise</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conversational Analytics Section -->
+    <section class="feature-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conversational Analytics</h2>
+                <p>Interact with your data through natural language, revolutionizing how you access business insights</p>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Intelligent Business Assistants</h3>
+                    <p>Our AI-powered conversational interface eliminates the need for complex query languages or technical expertise. Simply ask questions in plain language and receive immediate insights.</p>
+                    <ul class="feature-list">
+                        <li>Natural language query processing with contextual understanding</li>
+                        <li>Multi-turn conversations with follow-up questions and clarifications</li>
+                        <li>Personalized recommendations based on user role and history</li>
+                        <li>Business-specific terminology recognition and custom vocabulary</li>
+                        <li>Automated SQL generation and optimization behind the scenes</li>
+                    </ul>
+                    <a href="#demo" class="btn">Try a Demo</a>
+                </div>
+                <div class="feature-image">
+                    <img src="../img/features1.svg" alt="Conversational Analytics Interface" />
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Team-Specific AI Agents</h3>
+                    <p>Create customized AI assistants for different departments and business functions. Each assistant is pre-configured with relevant data sources and domain knowledge.</p>
+                    <ul class="feature-list">
+                        <li>Role-based assistants (Sales, Marketing, Finance, Operations)</li>
+                        <li>Guided analytics with industry best practices</li>
+                        <li>Scheduled insights and personalized data pushes</li>
+                        <li>Seamless integration with messaging platforms</li>
+                        <li>Knowledge management to capture business context</li>
+                    </ul>
+                    <a href="#learn-more" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="feature-image">
+                    <img src="../img/features2.svg" alt="Team-Specific AI Agents" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intelligent Dashboards Section -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Intelligent Dashboards</h2>
+                <p>Automatically generate and optimize data visualizations tailored to your specific analysis needs</p>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>AI-Generated Dashboards</h3>
+                    <p>Simply describe what you want to analyze, and our AI will create comprehensive dashboards with the most appropriate visualizations for your data and analysis goals.</p>
+                    <ul class="feature-list">
+                        <li>Generate complete dashboards from natural language descriptions</li>
+                        <li>Automatic selection of optimal chart types for your data</li>
+                        <li>Smart layout optimization for different screen sizes</li>
+                        <li>Guided dashboard creation with AI recommendations</li>
+                        <li>One-click dashboard refinement and customization</li>
+                    </ul>
+                    <a href="#examples" class="btn">View Examples</a>
+                </div>
+                <div class="feature-image">
+                    <img src="../img/features3.svg" alt="AI-Generated Dashboards" />
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Interactive Dashboard Exploration</h3>
+                    <p>Go beyond static visualizations with intelligent, interactive dashboards that allow for dynamic data exploration and deeper insights.</p>
+                    <ul class="feature-list">
+                        <li>Natural language questions about dashboard data</li>
+                        <li>Automated data storytelling and narrative generation</li>
+                        <li>Drill-down and exploration paths with AI guidance</li>
+                        <li>Automated anomaly highlighting and explanation</li>
+                        <li>Quick filters and comparative analysis views</li>
+                    </ul>
+                    <a href="#learn-more" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="feature-image">
+                    <img src="../img/features4.svg" alt="Interactive Dashboard Exploration" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Integration Section -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Universal Data Integration</h2>
+                <p>Connect and unify all your data sources for a complete view of your business</p>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Comprehensive Data Connectors</h3>
+                    <p>Connect to over 40 data sources with pre-built connectors that handle the technical complexity for you. From cloud services to on-premises databases, all your data is accessible in one platform.</p>
+                    <ul class="feature-list">
+                        <li>40+ pre-built data source connectors</li>
+                        <li>Support for SQL, NoSQL, and data lake architectures</li>
+                        <li>Real-time and batch data synchronization</li>
+                        <li>Secure credential management and OAuth integration</li>
+                        <li>Custom connector framework for proprietary systems</li>
+                    </ul>
+                    <a href="#connectors" class="btn">View All Connectors</a>
+                </div>
+                <div class="feature-image">
+                    <img src="../img/features5.svg" alt="Data Connectors" />
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Intelligent Data Preparation</h3>
+                    <p>Transform raw data into analysis-ready assets with AI-assisted data preparation tools that identify and fix common data quality issues automatically.</p>
+                    <ul class="feature-list">
+                        <li>Automated data cleaning and normalization</li>
+                        <li>Smart data type detection and conversion</li>
+                        <li>Missing value handling with intelligent imputation</li>
+                        <li>Automated dimension and metric classification</li>
+                        <li>Data transformation suggestions and one-click application</li>
+                    </ul>
+                    <a href="#learn-more" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="feature-image">
+                    <img src="../img/features6.svg" alt="Intelligent Data Preparation" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Analytics Section -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Analytics</h2>
+                <p>Leverage sophisticated analysis capabilities powered by artificial intelligence</p>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Anomaly Detection & Attribution</h3>
+                    <p>Automatically identify unusual patterns in your data and understand the root causes behind them. Our AI continuously monitors your metrics and alerts you to potential opportunities or issues.</p>
+                    <ul class="feature-list">
+                        <li>Real-time anomaly detection across all metrics</li>
+                        <li>Machine learning models that adapt to your data patterns</li>
+                        <li>Automatic root cause analysis and attribution</li>
+                        <li>Configurable sensitivity and alerting thresholds</li>
+                        <li>Historical anomaly comparison and trending</li>
+                    </ul>
+                    <a href="#demo" class="btn">See It In Action</a>
+                </div>
+                <div class="feature-image">
+                    <img src="/api/placeholder/450/300" alt="Anomaly Detection" />
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Predictive Analytics & Forecasting</h3>
+                    <p>Go beyond historical analysis to predict future trends and outcomes. Our AI models learn from your data to generate accurate forecasts and scenario analyses.</p>
+                    <ul class="feature-list">
+                        <li>Time series forecasting with confidence intervals</li>
+                        <li>Automatic seasonality and trend detection</li>
+                        <li>What-if scenario modeling and simulation</li>
+                        <li>Multi-factor predictive models with automated feature selection</li>
+                        <li>Forecast accuracy monitoring and model refinement</li>
+                    </ul>
+                    <a href="#learn-more" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="feature-image">
+                    <img src="/api/placeholder/450/300" alt="Predictive Analytics" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Collaborative Analytics</h2>
+                <p>Share insights and work together seamlessly across your organization</p>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Team Workspace & Sharing</h3>
+                    <p>Collaborate on analytics projects with team workspaces that enable shared access to dashboards, reports, and underlying data. Maintain governance while fostering teamwork.</p>
+                    <ul class="feature-list">
+                        <li>Team and project-based workspaces</li>
+                        <li>Collaborative dashboard editing and annotations</li>
+                        <li>Version control and change tracking</li>
+                        <li>Insight sharing with configurable permissions</li>
+                        <li>Comments and discussion threads on analytics content</li>
+                    </ul>
+                    <a href="#learn-more" class="btn">Learn More</a>
+                </div>
+                <div class="feature-image">
+                    <img src="/api/placeholder/450/300" alt="Team Collaboration" />
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Enterprise Communication Integration</h3>
+                    <p>Integrate analytics directly into your existing communication tools and workflows. Get insights where you already work, without switching between applications.</p>
+                    <ul class="feature-list">
+                        <li>Microsoft Teams, Slack, and enterprise chat integration</li>
+                        <li>Automated insight delivery via messaging platforms</li>
+                        <li>Interactive analytics bots for team channels</li>
+                        <li>Email scheduling and report distribution</li>
+                        <li>Smart alert routing and notification preferences</li>
+                    </ul>
+                    <a href="#integrations" class="btn btn-secondary">View Integrations</a>
+                </div>
+                <div class="feature-image">
+                    <img src="/api/placeholder/450/300" alt="Communication Integration" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Features Section -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise-Grade Platform</h2>
+                <p>Security, scalability, and governance features for organizations of all sizes</p>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Security & Governance</h3>
+                    <p>Enterprise-grade security features ensure that your data is protected and compliant with regulations. Comprehensive governance tools help maintain data integrity and policy enforcement.</p>
+                    <ul class="feature-list">
+                        <li>Role-based access control with granular permissions</li>
+                        <li>Data encryption at rest and in transit</li>
+                        <li>Audit logging and activity tracking</li>
+                        <li>Single sign-on (SSO) and identity management</li>
+                        <li>Data masking and privacy controls</li>
+                    </ul>
+                    <a href="#security" class="btn">Security Details</a>
+                </div>
+                <div class="feature-image">
+                    <img src="/api/placeholder/450/300" alt="Security & Governance" />
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3>Scalability & Performance</h3>
+                    <p>Built to handle enterprise-scale data volumes with high performance. Whether you have gigabytes or petabytes of data, WinAxis AI delivers responsive analytics experiences.</p>
+                    <ul class="feature-list">
+                        <li>Trillion-row query capability with sub-second response</li>
+                        <li>Distributed computing architecture</li>
+                        <li>Intelligent query optimization and caching</li>
+                        <li>Horizontal scaling for growing data volumes</li>
+                        <li>Resources monitoring and automatic optimization</li>
+                    </ul>
+                    <a href="#performance" class="btn btn-secondary">Performance Benchmarks</a>
+                </div>
+                <div class="feature-image">
+                    <img src="/api/placeholder/450/300" alt="Scalability & Performance" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>Feature Comparison</h2>
+                <p>See how WinAxis AI compares to traditional analytics platforms</p>
+            </div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>WinAxis AI</th>
+                        <th>Traditional BI</th>
+                        <th>Basic Analytics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Natural Language Querying</td>
+                        <td class="check">✓ Advanced</td>
+                        <td class="check">✓ Limited</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                    <tr>
+                        <td>AI-Generated Dashboards</td>
+                        <td class="check">✓ Comprehensive</td>
+                        <td class="cross">✗</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Automated Anomaly Detection</td>
+                        <td class="check">✓ Real-time</td>
+                        <td class="check">✓ Basic</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Root Cause Analysis</td>
+                        <td class="check">✓ Automated</td>
+                        <td class="check">✓ Manual</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Data Source Connectors</td>
+                        <td class="check">✓ 40+</td>
+                        <td class="check">✓ 10-20</td>
+                        <td class="check">✓ 5-10</td>
+                    </tr>
+                    <tr>
+                        <td>Predictive Analytics</td>
+                        <td class="check">✓ Advanced</td>
+                        <td class="check">✓ Basic</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise Security</td>
+                        <td class="check">✓ Comprehensive</td>
+                        <td class="check">✓ Standard</td>
+                        <td class="check">✓ Basic</td>
+                    </tr>
+                    <tr>
+                        <td>Collaboration Features</td>
+                        <td class="check">✓ Advanced</td>
+                        <td class="check">✓ Limited</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Experience</td>
+                        <td class="check">✓ Full-featured</td>
+                        <td class="check">✓ Limited</td>
+                        <td class="check">✓ Basic</td>
+                    </tr>
+                    <tr>
+                        <td>Implementation Time</td>
+                        <td class="check">✓ Days</td>
+                        <td class="cross">✗ Months</td>
+                        <td class="check">✓ Weeks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="tech-specs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Specifications</h2>
+                <p>Detailed technical information about the WinAxis AI platform</p>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h3>Platform Requirements</h3>
+                    <ul class="spec-details">
+                        <li>
+                            <span class="spec-label">Deployment Options:</span>
+                            <span>Cloud, On-premises, Hybrid</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Supported Browsers:</span>
+                            <span>Chrome, Firefox, Safari, Edge</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Mobile Support:</span>
+                            <span>iOS, Android (native apps)</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Min. Server Specs:</span>
+                            <span>8-core CPU, 32GB RAM</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Recommended:</span>
+                            <span>16-core CPU, 64GB RAM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>Performance</h3>
+                    <ul class="spec-details">
+                        <li>
+                            <span class="spec-label">Max Data Volume:</span>
+                            <span>Petabyte-scale</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Query Response:</span>
+                            <span>Sub-second for most queries</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Concurrent Users:</span>
+                            <span>Unlimited</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Real-time Processing:</span>
+                            <span>Yes, millisecond latency</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Batch Processing:</span>
+                            <span>Optimized for large datasets</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>Security</h3>
+                    <ul class="spec-details">
+                        <li>
+                            <span class="spec-label">Authentication:</span>
+                            <span>SSO, MFA, OIDC, SAML</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Data Encryption:</span>
+                            <span>AES-256 (at rest and in transit)</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Compliance:</span>
+                            <span>GDPR, HIPAA, SOC2, ISO 27001</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Access Control:</span>
+                            <span>Row, column, and cell-level</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Audit Logging:</span>
+                            <span>Comprehensive with retention</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>Integration</h3>
+                    <ul class="spec-details">
+                        <li>
+                            <span class="spec-label">API:</span>
+                            <span>RESTful, GraphQL</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Webhooks:</span>
+                            <span>Yes, with custom triggers</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">SDK Support:</span>
+                            <span>JavaScript, Python, Java, .NET</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Custom Extensions:</span>
+                            <span>Yes, via Extension Framework</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Embedded Analytics:</span>
+                            <span>Full support with white-labeling</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Revolutionize Your Data Strategy Today</h2>
+            <p>Experience the difference that intelligent analytics can make for your organization.</p>
+            <a href="#contact" class="btn">Schedule a Demo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>WinAxis AI</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">AI Assistant</a></li>
+                        <li><a href="#">Data Explorer</a></li>
+                        <li><a href="#">Dashboard Creator</a></li>
+                        <li><a href="#">Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 WinAxis AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
