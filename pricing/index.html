@@ -76,11 +76,6 @@
             color: var(--primary-dark);
         }
         
-        .btn-wide {
-            width: 100%;
-            text-align: center;
-        }
-        
         /* Header */
         header {
             background-color: white;
@@ -127,349 +122,302 @@
         .nav-links a:hover {
             color: var(--primary);
         }
-        
+
         .nav-links .active {
             color: var(--primary);
             font-weight: 600;
         }
         
-        /* Page Header */
-        .page-header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 160px 0 80px;
-            color: white;
-            text-align: center;
-        }
-        
-        .page-header h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .page-header p {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.25rem;
-        }
-
-        /* Pricing Toggle */
-        .pricing-toggle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 60px 0 40px;
-        }
-        
-        .toggle-label {
-            font-weight: 500;
-            cursor: pointer;
-        }
-        
-        .toggle-monthly {
-            margin-right: 15px;
-        }
-        
-        .toggle-annually {
-            margin-left: 15px;
-            opacity: 0.5;
-        }
-        
-        .toggle-switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .toggle-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: var(--primary);
-            transition: 0.4s;
-            border-radius: 34px;
-        }
-        
-        .toggle-slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: 0.4s;
-            border-radius: 50%;
-        }
-        
-        input:checked + .toggle-slider:before {
-            transform: translateX(26px);
-        }
-        
-        .discount-pill {
-            background-color: #22c55e;
-            color: white;
-            font-size: 0.8rem;
-            padding: 4px 10px;
-            border-radius: 20px;
-            margin-left: 10px;
-        }
-
-        /* Pricing Plans */
-        .pricing-section {
-            padding: 80px 0;
+        /* Pricing Section */
+        .pricing {
+            padding: 140px 0 100px;
             background-color: var(--light);
         }
         
-        .pricing-plans {
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 20px;
+            margin-top: 50px;
         }
         
-        .pricing-plan {
-            background-color: white;
+        .pricing-card {
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .pricing-plan:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .pricing-plan.featured {
-            border: 2px solid var(--primary);
             position: relative;
             overflow: hidden;
         }
         
-        .featured-ribbon {
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+        }
+        
+        .pricing-card.featured::before {
+            content: "Most Popular";
             position: absolute;
-            top: 20px;
+            top: 12px;
             right: -35px;
             background: var(--primary);
             color: white;
-            width: 150px;
-            padding: 5px 0;
-            text-align: center;
-            transform: rotate(45deg);
+            padding: 5px 40px;
             font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 1px;
+            transform: rotate(45deg);
         }
         
-        .plan-name {
+        .pricing-name {
             font-size: 1.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: var(--dark);
         }
         
-        .plan-description {
-            color: var(--text-light);
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .plan-price {
-            margin: 30px 0;
-        }
-        
-        .plan-price .amount {
-            font-size: 2.5rem;
+        .pricing-price {
+            font-size: 3rem;
             font-weight: 700;
+            margin-bottom: 20px;
             color: var(--primary);
         }
         
-        .plan-price .currency {
-            font-size: 1.2rem;
-            vertical-align: super;
-            color: var(--primary);
-        }
-        
-        .plan-price .period {
-            display: block;
-            font-size: 0.9rem;
+        .pricing-price span {
+            font-size: 1rem;
             color: var(--text-light);
         }
         
-        .plan-features {
-            margin: 30px 0;
-            text-align: left;
+        .pricing-description {
+            margin-bottom: 25px;
+            color: var(--text-light);
         }
         
-        .plan-features li {
-            margin-bottom: 12px;
-            padding-left: 30px;
-            position: relative;
+        .pricing-features {
             list-style: none;
+            margin-bottom: 30px;
         }
         
-        .plan-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
+        .pricing-features li {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        
+        .pricing-features li::before {
+            content: "✓";
             color: var(--primary);
+            margin-right: 10px;
             font-weight: bold;
         }
         
-        .plan-cta {
-            margin-top: 30px;
-        }
-
-        /* Comparison Table */
-        .comparison-section {
-            padding: 100px 0;
+        /* Calculator Section */
+        .calculator {
+            padding: 80px 0;
             background-color: white;
         }
         
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 40px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light);
             border-radius: 10px;
-            overflow: hidden;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
         
-        .comparison-table th, .comparison-table td {
-            padding: 15px 20px;
-            text-align: left;
-            border-bottom: 1px solid var(--gray);
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 30px;
         }
         
-        .comparison-table th {
-            background-color: var(--primary);
-            color: white;
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         
-        .comparison-table tr:last-child td {
-            border-bottom: none;
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
         }
         
-        .comparison-table td:first-child {
-            font-weight: 500;
+        .form-group label {
+            font-weight: 600;
+            font-size: 1.1rem;
         }
         
-        .comparison-table .check {
-            color: #22c55e;
-            font-weight: bold;
-/*            text-align: center;*/
+        /* Improved Plan Selector */
+        .plan-selection {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 25px;
         }
         
-        .comparison-table .dash {
-            color: #ef4444;
-/*            text-align: center;*/
+        .plan-option {
+            flex: 1;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
-
+        
+        .plan-option.selected {
+            border-color: var(--primary);
+            background: rgba(230, 31, 52, 0.05);
+            box-shadow: 0 5px 15px rgba(230, 31, 52, 0.1);
+        }
+        
+        .plan-option:hover:not(.selected) {
+            border-color: #ccc;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .plan-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .plan-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .plan-price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 100%;
+            padding: 10px 0;
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #ddd;
+            outline: none;
+            margin-top: 10px;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .result {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .result-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+        
         /* FAQ Section */
-        .faq-section {
-            padding: 100px 0;
+        .faq {
+            padding: 80px 0;
             background-color: var(--light);
         }
         
         .faq-container {
             max-width: 800px;
-            margin: 40px auto 0;
+            margin: 0 auto;
         }
         
         .faq-item {
-            background-color: white;
+            background: white;
+            margin-bottom: 15px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
         
         .faq-question {
             padding: 20px;
+            background: white;
+            font-weight: 500;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 500;
         }
         
-        .faq-question:hover {
-            background-color: rgba(0, 0, 0, 0.01);
+        .faq-question:after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--primary);
         }
         
         .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question:after {
+            content: "-";
+        }
+        
+        .faq-item.active .faq-answer {
             padding: 0 20px 20px;
-        }
-        
-        .faq-toggle {
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        /* Enterprise Section */
-        .enterprise-section {
-            padding: 100px 0;
-            background-color: white;
-        }
-        
-        .enterprise-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 10px;
-            padding: 40px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .enterprise-content {
-            flex: 2;
-            padding-right: 40px;
-        }
-        
-        .enterprise-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-        
-        .enterprise-content p {
-            margin-bottom: 25px;
-            color: var(--text-light);
-        }
-        
-        .enterprise-features {
-            margin-bottom: 30px;
-        }
-        
-        .enterprise-features li {
-            margin-bottom: 10px;
-            padding-left: 30px;
-            position: relative;
-        }
-        
-        .enterprise-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        .enterprise-cta {
-            flex: 1;
-            text-align: center;
-            border-left: 1px solid var(--gray);
-            padding-left: 40px;
+            max-height: 1000px;
         }
         
         /* CTA Section */
@@ -547,21 +495,12 @@
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .enterprise-card {
-                flex-direction: column;
+            .section-header h2 {
+                font-size: 2.2rem;
             }
             
-            .enterprise-content {
-                padding-right: 0;
-                margin-bottom: 40px;
-            }
-            
-            .enterprise-cta {
-                border-left: none;
-                border-top: 1px solid var(--gray);
-                padding-left: 0;
-                padding-top: 30px;
-                width: 100%;
+            .pricing-price {
+                font-size: 2.5rem;
             }
         }
         
@@ -570,21 +509,20 @@
                 display: none;
             }
             
-            .page-header {
-                padding: 130px 0 60px;
+            .pricing {
+                padding: 120px 0 80px;
             }
             
-            .page-header h1 {
-                font-size: 2.2rem;
+            .section-header h2 {
+                font-size: 2rem;
             }
             
-            .comparison-table {
-                display: block;
-                overflow-x: auto;
+            .calculator-container {
+                padding: 30px 20px;
             }
             
-            .pricing-toggle {
-                flex-wrap: wrap;
+            .plan-selection {
+                flex-direction: column;
             }
         }
         /* Language Switcher Styles */
@@ -609,7 +547,6 @@
             color: white;
             border-color: var(--primary);
             font-weight: 400;
-            border: none;
         }
     </style>
 </head>
@@ -633,270 +570,150 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Transparent Pricing For Every Business</h1>
-            <p>Choose the right plan for your data analytics needs, from startups to enterprise organizations</p>
-        </div>
-    </section>
-
-    <!-- Pricing Toggle -->
-    <section class="pricing-toggle">
-        <span class="toggle-label toggle-monthly">Monthly</span>
-        <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-        </label>
-        <span class="toggle-label toggle-annually">Annual <span class="discount-pill">Save 20%</span></span>
-    </section>
-
-    <!-- Pricing Plans -->
-    <section class="pricing-section">
-        <div class="container">
-            <div class="pricing-plans">
-                <div class="pricing-plan">
-                    <h3 class="plan-name">Starter</h3>
-                    <p class="plan-description">Ideal for individuals and small teams exploring data-driven insights</p>
-                    <div class="plan-price">
-                        <span class="currency">$</span>
-                        <span class="amount">299</span>
-                        <span class="period">per user / month</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>Connect up to 5 data sources</li>
-                        <li>Basic natural language queries</li>
-                        <li>10 AI-generated dashboards</li>
-                        <li>Standard visualizations</li>
-                        <li>Email support</li>
-                        <li>1GB data storage</li>
-                    </ul>
-                    <div class="plan-cta">
-                        <a href="#start-trial" class="btn btn-secondary btn-wide">Start Free Trial</a>
-                    </div>
-                </div>
-                <div class="pricing-plan featured">
-                    <div class="featured-ribbon">MOST POPULAR</div>
-                    <h3 class="plan-name">Professional</h3>
-                    <p class="plan-description">Perfect for growing teams that need advanced analytics capabilities</p>
-                    <div class="plan-price">
-                        <span class="currency">$</span>
-                        <span class="amount">699</span>
-                        <span class="period">per user / month</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>Connect up to 20 data sources</li>
-                        <li>Advanced natural language analytics</li>
-                        <li>Unlimited AI-generated dashboards</li>
-                        <li>Advanced visualizations</li>
-                        <li>Priority email & chat support</li>
-                        <li>10GB data storage</li>
-                        <li>Anomaly detection & alerts</li>
-                        <li>Team collaboration features</li>
-                    </ul>
-                    <div class="plan-cta">
-                        <a href="#start-trial" class="btn btn-wide">Start Free Trial</a>
-                    </div>
-                </div>
-                <div class="pricing-plan">
-                    <h3 class="plan-name">Business</h3>
-                    <p class="plan-description">For businesses requiring robust analytics and enterprise features</p>
-                    <div class="plan-price">
-                        <span class="currency">$</span>
-                        <span class="amount">1,299</span>
-                        <span class="period">per user / month</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>Connect up to 40 data sources</li>
-                        <li>Full natural language analytics suite</li>
-                        <li>Unlimited AI-generated dashboards</li>
-                        <li>All visualization types</li>
-                        <li>24/7 priority support</li>
-                        <li>50GB data storage</li>
-                        <li>Advanced anomaly detection & alerts</li>
-                        <li>Comprehensive collaboration tools</li>
-                        <li>Advanced security features</li>
-                        <li>Custom reporting</li>
-                    </ul>
-                    <div class="plan-cta">
-                        <a href="#start-trial" class="btn btn-secondary btn-wide">Start Free Trial</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature Comparison -->
-    <section class="comparison-section">
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2>Compare Plan Features</h2>
-                <p>Detailed breakdown of features available in each pricing tier</p>
+                <h2>Simple, Transparent Token-Based Pricing</h2>
+                <p>Pay only for what you use with our flexible token-based pricing model. Scale up or down based on your analytics needs.</p>
             </div>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Starter</th>
-                        <th>Professional</th>
-                        <th>Business</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Data Sources</td>
-                        <td>Up to 5</td>
-                        <td>Up to 20</td>
-                        <td>Up to 40</td>
-                    </tr>
-                    <tr>
-                        <td>AI Assistants</td>
-                        <td>Basic</td>
-                        <td>Advanced</td>
-                        <td>Enterprise-grade</td>
-                    </tr>
-                    <tr>
-                        <td>AI-Generated Dashboards</td>
-                        <td>10</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                    </tr>
-                    <tr>
-                        <td>Anomaly Detection</td>
-                        <td class="dash">—</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Root Cause Analysis</td>
-                        <td class="dash">—</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Data Storage</td>
-                        <td>1GB</td>
-                        <td>10GB</td>
-                        <td>50GB</td>
-                    </tr>
-                    <tr>
-                        <td>Predictive Analytics</td>
-                        <td class="dash">—</td>
-                        <td class="dash">—</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Data Refresh Rate</td>
-                        <td>Daily</td>
-                        <td>Hourly</td>
-                        <td>Real-time</td>
-                    </tr>
-                    <tr>
-                        <td>User Roles & Permissions</td>
-                        <td class="dash">—</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Custom Branding</td>
-                        <td class="dash">—</td>
-                        <td class="dash">—</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>API Access</td>
-                        <td class="dash">—</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Support Level</td>
-                        <td>Email</td>
-                        <td>Email & Chat</td>
-                        <td>24/7 Priority</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Starter</h3>
+                    <div class="pricing-price">$0.50<span>/1K tokens</span></div>
+                    <p class="pricing-description">Perfect for small teams and startups exploring data analytics</p>
+                    <ul class="pricing-features">
+                        <li>500K tokens included monthly</li>
+                        <li>Connect to 10 data sources</li>
+                        <li>AI-powered assistants (basic)</li>
+                        <li>Standard dashboards</li>
+                        <li>Community support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Start Free Trial</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3 class="pricing-name">Professional</h3>
+                    <div class="pricing-price">$0.40<span>/1K tokens</span></div>
+                    <p class="pricing-description">Ideal for growing businesses requiring deeper insights</p>
+                    <ul class="pricing-features">
+                        <li>2M tokens included monthly</li>
+                        <li>Connect to 25 data sources</li>
+                        <li>AI-powered assistants (advanced)</li>
+                        <li>Custom dashboards</li>
+                        <li>Anomaly detection & alerts</li>
+                        <li>Email & chat support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Choose Professional</a>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Enterprise</h3>
+                    <div class="pricing-price">$0.30<span>/1K tokens</span></div>
+                    <p class="pricing-description">For organizations with complex analytics requirements</p>
+                    <ul class="pricing-features">
+                        <li>10M+ tokens included monthly</li>
+                        <li>Connect to 40+ data sources</li>
+                        <li>AI-powered assistants (unlimited)</li>
+                        <li>Advanced anomaly detection</li>
+                        <li>Custom model training</li>
+                        <li>Dedicated support team</li>
+                        <li>Custom integrations</li>
+                    </ul>
+                    <a href="#contact" class="btn">Contact Sales</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Enterprise Section -->
-    <section class="enterprise-section">
+    <!-- Calculator Section -->
+    <section class="calculator">
         <div class="container">
-            <div class="enterprise-card">
-                <div class="enterprise-content">
-                    <h3>Enterprise Solutions</h3>
-                    <p>Tailored solutions for large organizations with complex data needs and custom requirements</p>
-                    <ul class="enterprise-features">
-                        <li>Unlimited data sources and storage</li>
-                        <li>Custom AI model training and optimization</li>
-                        <li>On-premises or private cloud deployment</li>
-                        <li>Advanced security and compliance features</li>
-                        <li>Dedicated account management</li>
-                        <li>Custom integration development</li>
-                        <li>SLA guarantees with 99.9% uptime</li>
-                    </ul>
-                </div>
-                <div class="enterprise-cta">
-                    <h4>Get a custom quote</h4>
-                    <p>Our team will work with you to create a tailored solution for your organization's unique needs.</p>
-                    <a href="#contact-sales" class="btn">Contact Sales</a>
+            <div class="section-header">
+                <h2>Estimate Your Monthly Cost</h2>
+                <p>Use our calculator to estimate your monthly costs based on your expected token usage</p>
+            </div>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label>Select Your Plan</label>
+                        <div class="plan-selection">
+                            <div class="plan-option" data-plan="starter">
+                                <div class="plan-name">Starter</div>
+                                <div class="plan-price">$0.50<span>/1K tokens</span></div>
+                            </div>
+                            <div class="plan-option selected" data-plan="professional">
+                                <div class="plan-name">Professional</div>
+                                <div class="plan-price">$0.40<span>/1K tokens</span></div>
+                            </div>
+                            <div class="plan-option" data-plan="enterprise">
+                                <div class="plan-name">Enterprise</div>
+                                <div class="plan-price">$0.30<span>/1K tokens</span></div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="selected-plan" value="professional">
+                    </div>
+                    <div class="form-group">
+                        <label for="tokens">Monthly Token Usage (in millions)</label>
+                        <div class="slider-container">
+                            <input type="range" min="0.5" max="20" value="2" step="0.5" class="slider" id="tokens">
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+                                <span>0.5M</span>
+                                <span id="tokens-value">2 million tokens</span>
+                                <span>20M</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <p>Estimated Monthly Cost:</p>
+                        <div class="result-price" id="monthly-cost">$80.00</div>
+                        <p class="small">2 million tokens included in Professional plan</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="faq">
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
-                <p>Find answers to common questions about our pricing and plans</p>
+                <p>Find answers to common questions about our token-based pricing model</p>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        How does the free trial work?
-                        <span class="faq-toggle">+</span>
-                    </div>
+                    <div class="faq-question">What are tokens and how are they counted?</div>
                     <div class="faq-answer">
-                        <p>Our free trial gives you full access to the Professional plan for 14 days. No credit card is required to start, and you can upgrade or cancel at any time. If you decide to subscribe, your data and dashboards will be preserved.</p>
+                        <p>Tokens are the basic units of measurement for AI processing in WinAxis AI. They roughly correspond to words or word fragments in queries and responses. Each query to our AI assistants, dashboard generation request, or data analysis operation consumes tokens. We transparently track token usage in your account dashboard, allowing you to monitor and optimize your usage.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Can I change plans or cancel my subscription?
-                        <span class="faq-toggle">+</span>
-                    </div>
+                    <div class="faq-question">What happens if I exceed my monthly token allowance?</div>
                     <div class="faq-answer">
-                        <p>Yes, you can upgrade, downgrade or cancel your subscription at any time. Upgrades take effect immediately, while downgrades or cancellations will be applied at the end of your current billing cycle.</p>
+                        <p>If you exceed your monthly token allowance, you'll simply be charged for the additional tokens used at your plan's per-token rate. There are no penalties or service interruptions. For example, if you're on the Professional plan and use 3 million tokens in a month (1 million over your allocation), you'll be charged an additional $400 (1M tokens × $0.40/1K tokens).</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">
-                        What payment methods do you accept?
-                        <span class="faq-toggle">+</span>
-                    </div>
+                    <div class="faq-question">Can I upgrade or downgrade my plan at any time?</div>
                     <div class="faq-answer">
-                        <p>We accept all major credit cards including Visa, Mastercard, American Express, and Discover. For Business and Enterprise plans, we also offer invoice payment options. Contact our sales team for more information.</p>
+                        <p>Yes, you can change your plan at any time. When upgrading, the new plan and rates take effect immediately. When downgrading, the changes will apply at the start of your next billing cycle. Any unused tokens from your current plan will not roll over.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Do you offer discounts for non-profits or educational institutions?
-                        <span class="faq-toggle">+</span>
-                    </div>
+                    <div class="faq-question">Do unused tokens roll over to the next month?</div>
                     <div class="faq-answer">
-                        <p>Yes, we offer special pricing for qualified non-profit organizations, educational institutions, and startups. Contact our sales team for more information on eligibility and discounts.</p>
+                        <p>No, unused tokens do not roll over to the next month. Your token allocation refreshes at the beginning of each billing cycle.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">
-                        What happens if I exceed my data storage limit?
-                        <span class="faq-toggle">+</span>
-                    </div>
+                    <div class="faq-question">Are there any long-term contracts?</div>
                     <div class="faq-answer">
-                        <p>If you approach your data storage limit, we'll notify you so you can either upgrade to a higher tier or optimize your data usage. We don't automatically charge for overages, but consistent overages will require an upgrade to ensure optimal performance.</p>
+                        <p>Our Starter and Professional plans are available on monthly or annual billing (with a 15% discount for annual billing). Enterprise plans typically have annual contracts, but we offer flexible terms to meet your organization's needs. Contact our sales team to discuss custom arrangements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is there a free trial available?</div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer a 14-day free trial that includes 100,000 tokens to explore WinAxis AI's capabilities. No credit card is required to start your trial. You can upgrade to a paid plan at any time during or after your trial period.</p>
                     </div>
                 </div>
             </div>
@@ -906,9 +723,9 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Start Your Free Trial Today</h2>
-            <p>Experience the power of AI-driven analytics with no commitment required</p>
-            <a href="#free-trial" class="btn">Start 14-Day Free Trial</a>
+            <h2>Ready to Transform Your Data Strategy?</h2>
+            <p>Get started with WinAxis AI today and unlock the full potential of your data with our intelligent analytics platform.</p>
+            <a href="#contact" class="btn">Schedule a Demo</a>
         </div>
     </section>
 
@@ -960,39 +777,74 @@
     </footer>
 
     <script>
-        // Toggle functionality for pricing
-        const toggle = document.querySelector('.toggle-switch input');
-        const monthlyLabel = document.querySelector('.toggle-monthly');
-        const annuallyLabel = document.querySelector('.toggle-annually');
-        
-        toggle.addEventListener('change', function() {
-            if(this.checked) {
-                monthlyLabel.style.opacity = '0.5';
-                annuallyLabel.style.opacity = '1';
-                // Would update pricing here in a real implementation
-            } else {
-                monthlyLabel.style.opacity = '1';
-                annuallyLabel.style.opacity = '0.5';
-                // Would update pricing here in a real implementation
-            }
-        });
-        
-        // FAQ accordion functionality
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const toggle = question.querySelector('.faq-toggle');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Plan selection
+            const planOptions = document.querySelectorAll('.plan-option');
+            const selectedPlanInput = document.getElementById('selected-plan');
+            const tokenSlider = document.getElementById('tokens');
+            const tokenValue = document.getElementById('tokens-value');
+            const monthlyCost = document.getElementById('monthly-cost');
+            
+            const rates = {
+                'starter': 0.50,
+                'professional': 0.40,
+                'enterprise': 0.30
+            };
+            
+            const includedTokens = {
+                'starter': 0.5,
+                'professional': 2,
+                'enterprise': 10
+            };
+            
+            // Update calculations based on selected plan and token amount
+            function updateCalculator() {
+                const plan = selectedPlanInput.value;
+                const tokens = parseFloat(tokenSlider.value);
+                tokenValue.textContent = tokens + ' million tokens';
                 
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                    toggle.textContent = '+';
-                } else {
-                    answer.style.display = 'block';
-                    toggle.textContent = '−';
-                }
+                const extraTokens = Math.max(0, tokens - includedTokens[plan]);
+                const cost = extraTokens * rates[plan] * 1000;
+                
+                monthlyCost.textContent = '$' + cost.toFixed(2);
+                document.querySelector('.result .small').textContent = 
+                    includedTokens[plan] + ' million tokens included in ' + 
+                    plan.charAt(0).toUpperCase() + plan.slice(1) + ' plan';
+            }
+            
+            // Set up plan option selection
+            planOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    planOptions.forEach(o => o.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Update the hidden input value
+                    selectedPlanInput.value = this.getAttribute('data-plan');
+                    
+                    // Update calculations
+                    updateCalculator();
+                });
             });
+            
+            // Update when slider changes
+            tokenSlider.addEventListener('input', function() {
+                updateCalculator();
+            });
+            
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Initialize calculator
+            updateCalculator();
         });
     </script>
 </body>
