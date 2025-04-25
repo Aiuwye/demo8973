@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinAxis AI - 关于我们</title>
+    <link rel="shortcut icon" href="../../img/icon.png">
+    <style>
+        :root {
+            --primary: #e61f34;
+            --primary-dark: #c51a2c;
+            --secondary: #1a73e8;
+            --dark: #333;
+            --light: #f7f8f9;
+            --gray: #eaeaea;
+            --text: #333;
+            --text-light: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: #f8f8f8;
+            color: var(--primary-dark);
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #222;
+            text-decoration: none;
+        }
+        .logo span{
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links .active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 160px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .about-section:nth-child(even) {
+            background-color: var(--light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.4rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .about-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .about-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .about-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .about-content {
+            flex: 1;
+            padding: 0 40px;
+        }
+        
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-content p {
+            margin-bottom: 25px;
+            color: var(--text);
+            font-size: 1.05rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mission and Vision */
+        .mission-vision {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            padding: 100px 0;
+        }
+        
+        .mission-vision-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .mission-card, .vision-card {
+            flex: 1;
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mission-card h3, .vision-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        .mission-card p, .vision-card p {
+            text-align: center;
+            font-size: 1.05rem;
+        }
+        
+        /* Values Section */
+        .values-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .value-icon svg {
+            width: 35px;
+            height: 35px;
+            color: var(--primary);
+        }
+        
+        .value-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* History Timeline */
+        .history-section {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: var(--gray);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            right: -50px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content:before {
+            left: -50px;
+        }
+        
+        .timeline-year {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content h3 {
+            margin-bottom: 10px;
+        }
+        
+        /* Global Presence */
+        .global-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .location-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .location-image {
+            height: 180px;
+            background-color: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .location-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .location-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .location-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        /* Why Choose Us */
+        .why-us-section {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .reasons-container {
+            margin-top: 50px;
+        }
+        
+        .reason-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .reason-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .reason-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .reason-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .reason-icon svg {
+            width: 25px;
+            height: 25px;
+            color: var(--primary);
+        }
+        
+        .reason-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+        }
+        
+        .cta .btn {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .cta .btn:hover {
+            background: var(--light);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 70px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-row {
+                flex-direction: column;
+            }
+            
+            .about-row:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .about-content, .about-image {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 40px;
+            }
+            
+            .mission-vision-container {
+                flex-direction: column;
+            }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                justify-content: flex-start !important;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 70px);
+                margin-left: 70px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content:before,
+            .timeline-item:nth-child(even) .timeline-content:before {
+                left: -40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header {
+                padding: 130px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+        /* Language Switcher Styles */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .language-btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            background: transparent;
+            border: 1px solid var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .language-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            font-weight: 400;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="javascript:void(0)" class="logo">WinAxis <span>AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../../cn/">首页</a></li>
+                <li><a href="../../features/cn/">功能特性</a></li>
+                <li><a href="../../solutions/cn/">解决方案</a></li>
+                <li><a href="../../cases/cn/">应用案例</a></li>
+                <li><a href="../../pricing/cn/">定价模式</a></li>
+                <li><a href="../../contact/cn/">联系我们</a></li>
+                <li class="language-switcher">
+                    <button class="language-btn" onclick="window.location.href='../'">EN</button>
+                    <button class="language-btn active" onclick="">中文</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>关于 WinAxis AI</h1>
+            <p>了解我们的故事、使命和我们如何通过智能数据分析改变企业决策方式</p>
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>公司概况</h2>
+                <p>WinAxis AI 是领先的智能数据分析与洞察平台，致力于让每个人都能轻松获取数据洞察</p>
+            </div>
+            <div class="about-row">
+                <div class="about-content">
+                    <h3>我们的故事</h3>
+                    <p>WinAxis AI 成立于 2021 年，由一群来自顶尖科技公司的数据科学家和人工智能专家共同创立。我们看到了一个明显的市场缺口：虽然企业拥有大量数据，但大多数员工却无法轻松访问和理解这些数据中的洞察。</p>
+                    <p>我们的创始团队相信，数据分析的未来在于让每一位员工都能像数据科学家一样思考，无需掌握复杂的技术技能。凭借这一理念，我们开发了一个革命性的平台，通过自然语言交互和 AI 驱动的智能，让数据分析变得直观、高效且人人可用。</p>
+                    <p>今天，WinAxis AI 已经发展成为全球领先的企业数据智能平台，服务于各行各业的数百家企业，帮助他们释放数据的全部潜力，推动创新和增长。</p>
+                </div>
+                <div class="about-image">
+                    <img src="/api/placeholder/450/300" alt="WinAxis AI 公司历史" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-header">
+                <h2>使命与愿景</h2>
+                <p>我们的核心目标和对未来的展望</p>
+            </div>
+            <div class="mission-vision-container">
+                <div class="mission-card">
+                    <h3>我们的使命</h3>
+                    <p>我们的使命是通过 AI 驱动的智能分析，民主化数据访问，让每个人都能轻松获取洞察，做出更明智的决策。我们致力于消除数据分析的技术壁垒，使企业中的每一位员工都能成为数据驱动的决策者。</p>
+                </div>
+                <div class="vision-card">
+                    <h3>我们的愿景</h3>
+                    <p>我们的愿景是创建一个世界，在这个世界中，数据不再是少数人的专属资源，而是赋能每个人的工具。我们期望看到每个组织都能充分利用其数据资产，释放创新潜力，并推动业务转型和增长。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>我们的核心价值观</h2>
+                <p>指导我们日常工作和决策的原则</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                            <path d="M9 18h6"></path>
+                            <path d="M10 22h4"></path>
+                        </svg>
+                    </div>
+                    <h3>创新精神</h3>
+                    <p>我们不断挑战现状，寻求更好的解决方案。创新是我们 DNA 的一部分，驱动着我们的产品和服务不断突破边界。</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
+                    <h3>透明诚信</h3>
+                    <p>我们以坦率和诚实的方式开展业务，确保我们的所有行动都建立在信任和道德基础之上。我们相信透明是与客户建立长期关系的关键。</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>客户至上</h3>
+                    <p>我们所做的一切都以客户为中心。我们倾听客户需求，不断改进我们的产品和服务，确保为客户创造最大价值。</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                    </div>
+                    <h3>卓越追求</h3>
+                    <p>我们不满足于平庸，始终追求最高标准的卓越。在产品开发、客户服务和内部运营的各个方面，我们都力求做到最好。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company History -->
+    <section class="history-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>我们的发展历程</h2>
+                <p>WinAxis AI 的成长与创新里程碑</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021年</div>
+                        <h3>公司成立</h3>
+                        <p>WinAxis AI 在硅谷成立，由行业资深数据科学家和AI专家创立，获得风险投资 A 轮融资 1000 万美元。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022年</div>
+                        <h3>首款产品发布</h3>
+                        <p>推出WinAxis AI 平台 1.0 版本，引入自然语言数据查询和智能仪表盘功能，获得市场高度认可。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023年</div>
+                        <h3>全球扩张</h3>
+                        <p>在亚太和欧洲设立区域总部，客户数量突破 200 家，完成 B 轮融资 3500 万美元。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024年</div>
+                        <h3>技术突破</h3>
+                        <p>发布AI驱动的智能分析助手和预测分析引擎，被 Gartner 评为分析领域"有远见者"，客户数量达到 500+。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025年</div>
+                        <h3>行业领导者</h3>
+                        <p>成为企业智能分析领域的市场领导者，推出针对多个垂直行业的专业解决方案，客户总数超过 1000 家。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence -->
+    <section class="global-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>全球影响力</h2>
+                <p>我们在全球的办公室和服务范围</p>
+            </div>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="/api/placeholder/300/150" alt="北美总部" />
+                    </div>
+                    <div class="location-info">
+                        <h3>美国总部</h3>
+                        <p>加利福尼亚州旧金山</p>
+                        <p>150 名员工</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="/api/placeholder/300/150" alt="欧洲办公室" />
+                    </div>
+                    <div class="location-info">
+                        <h3>欧洲总部</h3>
+                        <p>英国伦敦</p>
+                        <p>75名员工</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="/api/placeholder/300/150" alt="亚太办公室" />
+                    </div>
+                    <div class="location-info">
+                        <h3>亚太总部</h3>
+                        <p>新加坡</p>
+                        <p>100名员工</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="/api/placeholder/300/150" alt="中东办公室" />
+                    </div>
+                    <div class="location-info">
+                        <h3>中东办公室</h3>
+                        <p>阿联酋迪拜</p>
+                        <p>30名员工</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么选择我们</h2>
+                <p>WinAxis AI 为您的业务带来的独特优势</p>
+            </div>
+            <div class="reasons-container">
+                <div class="reason-item">
+                    <div class="reason-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="reason-content">
+                        <h3>先进技术</h3>
+                        <p>我们的平台采用最先进的人工智能和机器学习技术，提供市场上最智能、最直观的分析体验。我们的AI模型经过数百万数据点的训练，能够理解复杂的业务问题并提供准确的洞察。</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="reason-content">
+                        <h3>专业团队</h3>
+                        <p>我们拥有一支由行业专家组成的团队，包括数据科学家、AI研究人员、软件工程师和行业顾问。我们的团队成员来自世界顶尖科技公司和研究机构，拥有丰富的经验和专业知识。</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="reason-content">
+                        <h3>全面解决方案</h3>
+                        <p>我们提供端到端的数据分析解决方案，从数据集成到洞察生成和决策支持。无论您的数据存储在何处，无论您的团队拥有什么技能水平，WinAxis AI都能为您提供全面的支持。</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="reason-content">
+                        <h3>企业级安全</h3>
+                        <p>我们将安全视为首要任务，实施最严格的安全标准和最佳实践。我们的平台符合所有主要合规要求，包括GDPR、HIPAA和SOC 2，确保您的数据始终受到保护。</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
+                    </div>
+                    <div class="reason-content">
+                        <h3>卓越客户体验</h3>
+                        <p>我们以提供卓越的客户体验而自豪，从实施到持续支持，我们的客户成功团队会全程陪伴您。我们的客户满意度评分在行业中名列前茅，我们将不断努力超越客户期望。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>加入 WinAxis AI 的创新之旅</h2>
+            <p>无论您是寻找职业机会、合作伙伴关系还是希望了解我们的产品如何帮助您的业务，我们都期待与您联系。</p>
+            <a href="#contact" class="btn">联系我们</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>WinAxis AI</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">我们的团队</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="../../contact/cn/">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">AI助手</a></li>
+                        <li><a href="#">数据探索器</a></li>
+                        <li><a href="#">仪表盘创建器</a></li>
+                        <li><a href="#">企业解决方案</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">文档</a></li>
+                        <li><a href="#">API参考</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                        <li><a href="#">博客</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">安全</a></li>
+                        <li><a href="#">合规</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 WinAxis AI. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
