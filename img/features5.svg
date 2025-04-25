@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Central hub -->
+  <circle cx="225" cy="150" r="45" fill="#f7f8f9" stroke="#eaeaea" stroke-width="2"/>
+  <circle cx="225" cy="150" r="30" fill="#e61f34" opacity="0.1"/>
+  <circle cx="225" cy="150" r="15" fill="#e61f34" opacity="0.2"/>
+  
+  <!-- AI Center Element -->
+  <circle cx="225" cy="150" r="10" fill="white" stroke="#e61f34" stroke-width="1.5"/>
+  <circle cx="225" cy="150" r="5" fill="#e61f34"/>
+  
+  <!-- Connection nodes -->
+  <!-- Database connection (top) -->
+  <circle cx="225" cy="50" r="20" fill="white" stroke="#aab0b6" stroke-width="1.5"/>
+  <rect x="212" y="40" width="26" height="5" rx="2" ry="2" fill="#aab0b6"/>
+  <rect x="212" y="48" width="26" height="14" rx="2" ry="2" fill="#aab0b6" opacity="0.3"/>
+  <line x1="212" y1="53" x2="238" y2="53" stroke="#aab0b6" stroke-width="1"/>
+  <line x1="212" y1="58" x2="238" y2="58" stroke="#aab0b6" stroke-width="1"/>
+  
+  <!-- Cloud connection (right) -->
+  <circle cx="325" cy="150" r="20" fill="white" stroke="#aab0b6" stroke-width="1.5"/>
+  <path d="M315 155 C 315 148, 320 145, 325 145 C 327 145, 330 146, 332 148 C 332 146, 336 144, 338 144 C 343 144, 345 148, 345 150 C 345 154, 341 156, 338 156 L 319 156 C 317 156, 315 153, 315 155" 
+        fill="#aab0b6" opacity="0.5"/>
+  
+  <!-- Local files connection (bottom) -->
+  <circle cx="225" cy="250" r="20" fill="white" stroke="#aab0b6" stroke-width="1.5"/>
+  <rect x="213" y="243" width="24" height="16" rx="1" ry="1" fill="#aab0b6" opacity="0.3"/>
+  <line x1="213" y1="247" x2="237" y2="247" stroke="#aab0b6" stroke-width="1"/>
+  <line x1="213" y1="251" x2="230" y2="251" stroke="#aab0b6" stroke-width="1"/>
+  <line x1="213" y1="255" x2="235" y2="255" stroke="#aab0b6" stroke-width="1"/>
+  
+  <!-- API connection (left) -->
+  <circle cx="125" cy="150" r="20" fill="white" stroke="#aab0b6" stroke-width="1.5"/>
+  <path d="M115 150 L125 140 L135 150 L125 160 Z" fill="#aab0b6" opacity="0.5"/>
+  <line x1="125" y1="143" x2="125" y2="157" stroke="white" stroke-width="1.5"/>
+  <line x1="119" y1="150" x2="131" y2="150" stroke="white" stroke-width="1.5"/>
+  
+  <!-- Connection paths with animated flow -->
+  <path d="M225 95 L225 70" stroke="#e61f34" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <path d="M225 205 L225 230" stroke="#e61f34" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <path d="M180 150 L145 150" stroke="#e61f34" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <path d="M270 150 L305 150" stroke="#e61f34" stroke-width="1.5" stroke-dasharray="3,3"/>
+  
+  <!-- Data flow indicators -->
+  <circle cx="225" cy="80" r="4" fill="#e61f34"/>
+  <circle cx="225" cy="220" r="4" fill="#e61f34"/>
+  <circle cx="155" cy="150" r="4" fill="#e61f34"/>
+  <circle cx="295" cy="150" r="4" fill="#e61f34"/>
+  
+  <!-- Additional data sources -->
+  <!-- Small database (top left) -->
+  <circle cx="175" cy="85" r="15" fill="white" stroke="#aab0b6" stroke-width="1"/>
+  <rect x="165" y="78" width="20" height="4" rx="1" ry="1" fill="#aab0b6"/>
+  <rect x="165" y="83" width="20" height="10" rx="1" ry="1" fill="#aab0b6" opacity="0.3"/>
+  <line x1="165" y1="86" x2="185" y2="86" stroke="#aab0b6" stroke-width="0.5"/>
+  <path d="M175 85 L190 115" stroke="#e61f34" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="185" cy="105" r="3" fill="#e61f34"/>
+  
+  <!-- Spreadsheet (top right) -->
+  <circle cx="275" cy="85" r="15" fill="white" stroke="#aab0b6" stroke-width="1"/>
+  <rect x="265" y="78" width="20" height="15" rx="1" ry="1" fill="#aab0b6" opacity="0.3"/>
+  <line x1="265" y1="83" x2="285" y2="83" stroke="#aab0b6" stroke-width="0.5"/>
+  <line x1="265" y1="88" x2="285" y2="88" stroke="#aab0b6" stroke-width="0.5"/>
+  <line x1="270" y1="78" x2="270" y2="93" stroke="#aab0b6" stroke-width="0.5"/>
+  <line x1="275" y1="78" x2="275" y2="93" stroke="#aab0b6" stroke-width="0.5"/>
+  <line x1="280" y1="78" x2="280" y2="93" stroke="#aab0b6" stroke-width="0.5"/>
+  <path d="M275 85 L260 115" stroke="#e61f34" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="265" cy="105" r="3" fill="#e61f34"/>
+  
+  <!-- API (bottom left) -->
+  <circle cx="175" cy="215" r="15" fill="white" stroke="#aab0b6" stroke-width="1"/>
+  <path d="M168 215 L175 208 L182 215 L175 222 Z" fill="#aab0b6" opacity="0.5"/>
+  <path d="M175 215 L190 185" stroke="#e61f34" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="185" cy="195" r="3" fill="#e61f34"/>
+  
+  <!-- Cloud file (bottom right) -->
+  <circle cx="275" cy="215" r="15" fill="white" stroke="#aab0b6" stroke-width="1"/>
+  <path d="M268 218 C 268 214, 270 213, 273 213 C 274 213, 276 213, 277 214 C 277 213, 279 212, 280 212 C 283 212, 284 214, 284 215 C 284 217, 282 218, 280 218 L 270 218 C 269 218, 268 217, 268 218" 
+        fill="#aab0b6" opacity="0.5"/>
+  <path d="M275 215 L260 185" stroke="#e61f34" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="265" cy="195" r="3" fill="#e61f34"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="385" cy="75" r="8" fill="#e61f34" opacity="0.1"/>
+  <circle cx="395" cy="85" r="5" fill="#e61f34" opacity="0.1"/>
+  <circle cx="65" cy="225" r="8" fill="#e61f34" opacity="0.1"/>
+  <circle cx="55" cy="215" r="5" fill="#e61f34" opacity="0.1"/>
+</svg>
