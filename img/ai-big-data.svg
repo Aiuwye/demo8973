@@ -1,0 +1,251 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background elements removed -->
+  
+  <!-- Central AI Brain element with pulsing animation -->
+  <circle cx="400" cy="350" r="100" fill="none" stroke="#BBBBBB" stroke-width="4">
+    <animate attributeName="r" values="100;110;100" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Neural network connections -->
+  <g>
+    <line x1="400" y1="250" x2="400" y2="200" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="400" y1="450" x2="400" y2="500" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="300" y1="350" x2="250" y2="350" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="500" y1="350" x2="550" y2="350" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="328" y1="278" x2="278" y2="228" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="472" y1="278" x2="522" y2="228" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="328" y1="422" x2="278" y2="472" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="472" y1="422" x2="522" y2="472" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    </line>
+  </g>
+  
+  <!-- AI Pattern in brain -->
+  <path d="M380 320 L390 320 L390 310 L400 310 L400 320 L410 320 L410 330 L420 330 L420 350 L410 350 L410 370 L400 370 L400 380 L390 380 L390 370 L380 370 L380 350 L370 350 L370 330 L380 330 Z" fill="#e61f34" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- Data nodes -->
+  <g>
+    <!-- Data nodes with no text -->
+    <circle cx="400" cy="200" r="30" fill="none" stroke="#BBBBBB" stroke-width="3" />
+    
+    <!-- Bottom node -->
+    <circle cx="400" cy="500" r="30" fill="none" stroke="#BBBBBB" stroke-width="3" />
+    
+    <!-- Left node -->
+    <circle cx="250" cy="350" r="30" fill="none" stroke="#BBBBBB" stroke-width="3" />
+    
+    <!-- Right node -->
+    <circle cx="550" cy="350" r="30" fill="none" stroke="#BBBBBB" stroke-width="3" />
+    
+    <!-- Top-left node -->
+    <circle cx="278" cy="228" r="20" fill="none" stroke="#BBBBBB" stroke-width="3" />
+    <circle cx="278" cy="228" r="8" fill="#e61f34" opacity="0.7">
+      <animate attributeName="r" values="8;10;8" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Top-right node -->
+    <circle cx="522" cy="228" r="20" fill="none" stroke="#BBBBBB" stroke-width="3" />
+    <circle cx="522" cy="228" r="8" fill="#e61f34" opacity="0.7">
+      <animate attributeName="r" values="8;10;8" dur="1.7s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Bottom-left node -->
+    <circle cx="278" cy="472" r="20" fill="none" stroke="#BBBBBB" stroke-width="3" />
+    <circle cx="278" cy="472" r="8" fill="#e61f34" opacity="0.7">
+      <animate attributeName="r" values="8;10;8" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Bottom-right node -->
+    <circle cx="522" cy="472" r="20" fill="none" stroke="#BBBBBB" stroke-width="3" />
+    <circle cx="522" cy="472" r="8" fill="#e61f34" opacity="0.7">
+      <animate attributeName="r" values="8;10;8" dur="1.6s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Data flow visualization -->
+  <g>
+    <!-- Data particles flowing toward brain -->
+    <circle cx="400" cy="230" r="5" fill="#e61f34">
+      <animate attributeName="cy" values="230;320" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="380" cy="230" r="3" fill="#e61f34">
+      <animate attributeName="cy" values="230;330" dur="1.7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="1.7s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="420" cy="230" r="4" fill="#e61f34">
+      <animate attributeName="cy" values="230;335" dur="2.3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2.3s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="280" cy="350" r="5" fill="#e61f34">
+      <animate attributeName="cx" values="280;340" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="290" cy="370" r="3" fill="#e61f34">
+      <animate attributeName="cx" values="290;335" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Output particles flowing from brain -->
+    <circle cx="400" cy="410" r="4" fill="#e61f34">
+      <animate attributeName="cy" values="410;470" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="410" cy="420" r="5" fill="#e61f34">
+      <animate attributeName="cy" values="420;465" dur="1.6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="1.6s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="390" cy="415" r="3" fill="#e61f34">
+      <animate attributeName="cy" values="415;475" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="500" cy="350" r="4" fill="#e61f34">
+      <animate attributeName="cx" values="460;520" dur="1.9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="1.9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Big Data visualization elements -->
+  <g>
+    <!-- Data clusters -->
+    <rect x="100" y="200" width="80" height="40" rx="5" fill="none" stroke="#BBBBBB" stroke-width="2">
+      <animate attributeName="stroke-width" values="2;3;2" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="110" y="210" width="60" height="5" fill="#BBBBBB" />
+    <rect x="110" y="220" width="50" height="5" fill="#BBBBBB" />
+    <rect x="110" y="230" width="40" height="5" fill="#BBBBBB" />
+    
+    <rect x="100" y="150" width="60" height="30" rx="5" fill="none" stroke="#BBBBBB" stroke-width="2">
+      <animate attributeName="stroke-width" values="2;3;2" dur="2.5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="110" y="160" width="40" height="4" fill="#BBBBBB" />
+    <rect x="110" y="168" width="30" height="4" fill="#BBBBBB" />
+    
+    <rect x="150" y="100" width="70" height="35" rx="5" fill="none" stroke="#BBBBBB" stroke-width="2">
+      <animate attributeName="stroke-width" values="2;3;2" dur="2.7s" repeatCount="indefinite" />
+    </rect>
+    <rect x="160" y="110" width="50" height="5" fill="#BBBBBB" />
+    <rect x="160" y="120" width="45" height="5" fill="#BBBBBB" />
+    
+    <rect x="620" y="200" width="80" height="40" rx="5" fill="none" stroke="#BBBBBB" stroke-width="2">
+      <animate attributeName="stroke-width" values="2;3;2" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="630" y="210" width="60" height="5" fill="#BBBBBB" />
+    <rect x="630" y="220" width="50" height="5" fill="#BBBBBB" />
+    <rect x="630" y="230" width="40" height="5" fill="#BBBBBB" />
+    
+    <rect x="640" y="150" width="60" height="30" rx="5" fill="none" stroke="#BBBBBB" stroke-width="2">
+      <animate attributeName="stroke-width" values="2;3;2" dur="2.5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="650" y="160" width="40" height="4" fill="#BBBBBB" />
+    <rect x="650" y="168" width="30" height="4" fill="#BBBBBB" />
+    
+    <rect x="580" y="100" width="70" height="35" rx="5" fill="none" stroke="#BBBBBB" stroke-width="2">
+      <animate attributeName="stroke-width" values="2;3;2" dur="2.7s" repeatCount="indefinite" />
+    </rect>
+    <rect x="590" y="110" width="50" height="5" fill="#BBBBBB" />
+    <rect x="590" y="120" width="45" height="5" fill="#BBBBBB" />
+  </g>
+  
+  <!-- Data visualization elements -->
+  <g>
+    <!-- Histogram -->
+    <rect x="130" y="600" width="20" height="40" fill="none" stroke="#BBBBBB" stroke-width="2" />
+    <rect x="160" y="590" width="20" height="50" fill="none" stroke="#BBBBBB" stroke-width="2" />
+    <rect x="190" y="570" width="20" height="70" fill="none" stroke="#BBBBBB" stroke-width="2" />
+    <rect x="220" y="620" width="20" height="20" fill="none" stroke="#BBBBBB" stroke-width="2" />
+    <rect x="160" y="590" width="20" height="20" fill="#e61f34" opacity="0.3" />
+    <rect x="190" y="570" width="20" height="30" fill="#e61f34" opacity="0.3" />
+    
+    <!-- Pie Chart -->
+    <circle cx="660" cy="600" r="40" fill="none" stroke="#BBBBBB" stroke-width="2" />
+    <path d="M660 600 L660 560 A40 40 0 0 1 695 615 Z" fill="#e61f34" opacity="0.3" stroke="#BBBBBB" stroke-width="1" />
+    <path d="M660 600 L695 615 A40 40 0 0 1 625 615 Z" fill="#F7F7F8" stroke="#BBBBBB" stroke-width="1" />
+    <path d="M660 600 L625 615 A40 40 0 0 1 660 560 Z" fill="#BBBBBB" opacity="0.3" stroke="#BBBBBB" stroke-width="1" />
+  </g>
+  
+  <!-- Algorithm Representation -->
+  <g>
+    <rect x="320" y="570" width="160" height="80" rx="5" fill="none" stroke="#BBBBBB" stroke-width="2" />
+    <line x1="340" y1="590" x2="460" y2="590" stroke="#BBBBBB" stroke-width="1.5" />
+    <line x1="340" y1="610" x2="420" y2="610" stroke="#BBBBBB" stroke-width="1.5" />
+    <line x1="340" y1="630" x2="440" y2="630" stroke="#BBBBBB" stroke-width="1.5" />
+    
+    <rect x="375" y="550" width="50" height="20" rx="10" fill="#e61f34" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- Path Connections (replaced binary data streams) -->
+  <path id="data-path-1" d="M150 280 C200 300, 250 320, 300 350" fill="none" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="5,3">
+    <animate attributeName="stroke-dashoffset" values="0;15" dur="2s" repeatCount="indefinite" />
+  </path>
+  
+  <path id="data-path-2" d="M500 350 C550 320, 600 300, 650 280" fill="none" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="5,3">
+    <animate attributeName="stroke-dashoffset" values="0;15" dur="2s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- Cloud data element -->
+  <path d="M400 60 C380 40, 350 40, 330 60 C310 40, 280 50, 280 80 C260 90, 260 120, 280 130 C280 150, 310 170, 340 150 C360 180, 400 180, 420 150 C450 170, 480 150, 480 130 C500 120, 500 90, 480 80 C480 50, 450 40, 430 60 C420 40, 400 40, 400 60" fill="none" stroke="#BBBBBB" stroke-width="2">
+    <animate attributeName="stroke-width" values="2;3;2" dur="3s" repeatCount="indefinite" />
+  </path>
+  <text x="380" y="115" font-family="monospace" font-size="14" text-anchor="middle" fill="#BBBBBB">BIG DATA</text>
+  
+  <!-- Server Racks -->
+  <rect x="100" y="400" width="80" height="100" rx="2" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <rect x="110" y="410" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="110" y="425" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="110" y="440" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="110" y="455" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="110" y="470" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="110" y="485" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <circle cx="165" cy="415" r="2" fill="#e61f34">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="165" cy="430" r="2" fill="#e61f34">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="1.3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="165" cy="445" r="2" fill="#e61f34">
+    <animate attributeName="opacity" values="1;0.2;1" dur="0.8s" repeatCount="indefinite" />
+  </circle>
+  
+  <rect x="620" y="400" width="80" height="100" rx="2" fill="none" stroke="#BBBBBB" stroke-width="2" />
+  <rect x="630" y="410" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="630" y="425" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="630" y="440" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="630" y="455" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="630" y="470" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <rect x="630" y="485" width="60" height="10" fill="none" stroke="#BBBBBB" stroke-width="1" />
+  <circle cx="685" cy="415" r="2" fill="#e61f34">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="1.2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="685" cy="430" r="2" fill="#e61f34">
+    <animate attributeName="opacity" values="1;0.2;1" dur="0.9s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="685" cy="460" r="2" fill="#e61f34">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+</svg>
